@@ -13,6 +13,7 @@
   /*===== Fuente y tipografia =====*/
   --body-font: "Poppins", sans-serif;
   --big-font-size: 2rem;
+  --huge-font-size: 3.5rem;
   --h2-font-size: 1.25rem;
   --normal-font-size: .938rem;
   --smaller-font-size: .75rem;
@@ -28,6 +29,7 @@
 @media screen and (min-width: 968px) {
   :root {
     --big-font-size: 3.5rem;
+    --huge-font-size: 4.5rem;
     --h2-font-size: 2rem;
     --normal-font-size: 1rem;
     --smaller-font-size: .875rem;
@@ -173,9 +175,22 @@ img {
   background-color: var(--first-color);
 }
 
+.full-screen-block {
+  /* width: 100vw; */
+  height: 100vh;
+}
+
+
 /*=== Show menu ===*/
 .show {
   right: 0;
+}
+
+.full-screen-block-centering {
+  /* width: 100vw; */
+  height: 100vh;
+  display: flex;
+  justify-content: center;
 }
 
 /*===== HOME =====*/
@@ -188,8 +203,9 @@ img {
   align-self: center;
 }
 .home__title {
-  font-size: var(--big-font-size);
+  font-size: var(--huge-font-size);
   margin-bottom: var(--mb-5);
+  text-align: center;
 }
 .home__title-color {
   color: var(--first-color);
@@ -233,6 +249,13 @@ img {
 .button:hover {
   box-shadow: 0px 10px 36px rgba(0, 0, 0, 0.15);
 }
+.button-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem; /* 设置按钮之间的间距 */
+    text-align: center; /* 将文本居中显示 */
+}
+
 
 /* ===== ABOUT =====*/
 .about__container {

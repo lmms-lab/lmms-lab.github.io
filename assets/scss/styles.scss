@@ -17,6 +17,7 @@
     --body-font: 'Poppins', sans-serif;
 
     --big-font-size: 2rem;
+    --huge-font-size: 3.5rem;
     --h2-font-size: 1.25rem;
     --normal-font-size: .938rem;
     --smaller-font-size: .75rem;
@@ -33,6 +34,7 @@
 
     @media screen and (min-width: 968px){
         --big-font-size: 3.5rem;
+        --huge-font-size: 4.5rem;
         --h2-font-size: 2rem;
         --normal-font-size: 1rem;
         --smaller-font-size: .875rem;
@@ -188,7 +190,7 @@ img{
         align-self: center;
     }
     &__title{
-        font-size: var(--big-font-size);
+        font-size: var(--huge-font-size);
         margin-bottom: var(--mb-5);
 
         &-color{
