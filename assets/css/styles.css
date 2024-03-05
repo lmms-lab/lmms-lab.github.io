@@ -510,8 +510,8 @@ img {
 
 .authors__container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(12.5rem, 1fr)); /* 创建一个响应式的多列布局 */
-    gap: 1.25rem; /* 设置列之间和行之间的间距 */
+    grid-template-columns: repeat(auto-fit, minmax(10.5rem, 1fr)); /* 创建一个响应式的多列布局 */
+    gap: 0.2rem; /* 设置列之间和行之间的间距 */
     justify-content: center; /* 在容器中水平居中对齐网格项 */
     align-items: start; /* 在容器中顶部对齐网格项 */
 }
@@ -528,13 +528,13 @@ img {
     height: 6.25rem; /* 图片高度，保持宽高比为1:1 */
     border-radius: 0.625rem; /* 创建圆角效果 */
     margin-bottom: 0.625rem; /* 图片与下方文本之间的间距 */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* 添加过渡效果 */
+    transition: transform 1s, box-shadow 1s; /* 添加过渡效果，持续时间为1秒 */
     box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* 添加轻微的阴影 */
 }
 
 .author__img:hover {
-    transform: scale(1.05); /* 鼠标悬停时缩放图片 */
-    box-shadow: 0 8px 15px rgba(0,0,0,0.2); /* 鼠标悬停时增加阴影 */
+    transform: scale(1.1); /* 鼠标悬停时缩放图片，与.work__img img的效果一致 */
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2); /* 鼠标悬停时增加阴影，可根据需要调整 */
 }
 
 .author__name {
