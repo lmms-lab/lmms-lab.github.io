@@ -546,3 +546,44 @@ img {
 .author__description {
     font-size: 1rem; /* 描述的字体大小 */
 }
+
+.lmms-eval__container {
+    display: flex;
+    flex-direction: column; /* Change the layout to vertical */
+    align-items: center; /* Center align the content */
+    gap: 1rem; /* Add some space between the buttons and the description */
+}
+
+.lmms-eval__content {
+    display: flex;
+    flex-direction: row; /* Stack buttons vertically */
+    align-items: center; /* Center align the buttons */
+    gap: 0.5rem; /* Add some space between the buttons */
+}
+
+.advantage-btn {
+    background-color: var(--first-color);
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    border-radius: 0.5rem; /* Optional: Adds rounded corners to the buttons */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.advantage-btn:hover {
+    background-color: var(--first-color-light); /* Lighten the button color on hover */
+}
+
+.advantage-btn--active {
+    background-color: var(--second-color); /* Change to a different color to indicate active state */
+}
+
+.advantage-description {
+    padding: 1rem;
+    border: 1px solid #ccc; /* Optional: Adds a border around the description */
+    border-radius: 0.5rem; /* Optional: Adds rounded corners to the description box */
+    width: 100%; /* Optional: Adjusts the width of the description box */
+    max-width: 600px; /* Optional: Sets a max-width for larger screens */
+    text-align: center; /* Center aligns the text */
+}
