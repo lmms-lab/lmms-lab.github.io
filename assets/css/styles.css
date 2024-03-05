@@ -283,6 +283,11 @@ img {
 
 .about__subtitle {
     margin-bottom: 10px; /* Adds space below the subtitle */
+    color: var(--first-color); /* Set the subtitle color */
+}
+
+.about__subtitle a {
+  color: var(--first-color);
 }
 
 .about__text {
