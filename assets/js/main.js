@@ -85,3 +85,7 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelector('.advantage-btn[data-advantage="fast"]').classList.add('advantage-btn--active');
     descriptionElement.textContent = 'Detailed description of how it is fast.';
 });
+
+document.getElementById('scrollDownFAB').addEventListener('click', function() {
+    window.scrollBy({ top: window.innerHeight, behavior: 'smooth' });
+});
