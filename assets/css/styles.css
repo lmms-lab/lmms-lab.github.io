@@ -526,8 +526,15 @@ img {
 .author__img {
     width: 6.25rem; /* 图片宽度 */
     height: 6.25rem; /* 图片高度，保持宽高比为1:1 */
-    border-radius: 0.625rem; /* 创建圆角效果，根据需要调整这个值 */
+    border-radius: 0.625rem; /* 创建圆角效果 */
     margin-bottom: 0.625rem; /* 图片与下方文本之间的间距 */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* 添加过渡效果 */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* 添加轻微的阴影 */
+}
+
+.author__img:hover {
+    transform: scale(1.05); /* 鼠标悬停时缩放图片 */
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2); /* 鼠标悬停时增加阴影 */
 }
 
 .author__name {
