@@ -11,6 +11,13 @@
   --first-color: hsl(var(--hue-color), 89%, 60%);
   --first-color-light: hsl(var(--hue-color), 89%, 75%);
   --second-color: hsl(var(--hue-color), 56%, 12%);
+
+  --first-color-dark: #BB86FC; /* Material Purple 200 for active state */
+  --second-color-dark: #03DAC6; /* Material Teal 200 for button background */
+  --text-color-dark: #E0E0E0; /* Light text color for dark backgrounds */
+  --shadow-color-dark: rgba(255, 255, 255, 0.25); /* Lighter shadow for dark themes */
+
+
   /*===== Fuente y tipografia =====*/
   --body-font: "Poppins", sans-serif;
   --big-font-size: 2rem;
@@ -193,6 +200,14 @@ img {
   height: 100vh;
   display: flex;
   justify-content: center;
+}
+
+.full-screen-block-centering-other-color {
+  /* width: 100vw; */
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  background-color: var(--second-color);
 }
 
 /*===== HOME =====*/
@@ -561,31 +576,33 @@ img {
     flex-direction: row; /* Stack buttons vertically */
     align-items: center; /* Center align the buttons */
     gap: 0.5rem; /* Add some space between the buttons */
+    color: var(--text-color-dark); /* Set the text color */
 }
 
 .advantage-btn {
-    background-color: var(--second-color);
+    background-color: var(--second-color-dark);
     color: #fff;
     border: none;
     padding: 0.75rem 1.5rem;
     cursor: pointer;
     border-radius: 0.5rem; /* Optional: Adds rounded corners to the buttons */
     transition: background-color 0.3s; /* Smooth transition for hover effect */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 6px var(--shadow-color-dark); /* Optional: Adds a light shadow to the buttons */
 }
 
 .advantage-btn:hover {
     transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transition for hover effect and shadow */
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 6px 8px var(--shadow-color-dark); /* Lighter shadow for hover effect */
 }
 
 .advantage-btn--active {
-    background-color: var(--first-color); /* Change to a different color to indicate active state */
+    background-color: var(--first-color-dark); /* Change to a different color to indicate active state */
 }
 
 .advantage-description {
     padding: 1rem;
     border: 1px solid #ccc; /* Optional: Adds a border around the description */
+    color: var(--text-color-dark); /* Set the text color */
     border-radius: 0.5rem; /* Optional: Adds rounded corners to the description box */
     width: 100%; /* Optional: Adjusts the width of the description box */
     max-width: 600px; /* Optional: Sets a max-width for larger screens */
