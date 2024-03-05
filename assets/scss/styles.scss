@@ -525,3 +525,26 @@ img{
         }
     }
 }
+
+#scrollDownFAB {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #6200EA; /* Material Design Primary Color */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 56px;
+    height: 56px;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.24);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#scrollDownFAB:hover {
+    background-color: #3700B3; /* Darker shade for hover effect */
+}

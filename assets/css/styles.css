@@ -199,6 +199,7 @@ img {
   /* width: 100vw; */
   height: 100vh;
   display: flex;
+  align-items: center;
   justify-content: center;
 }
 
@@ -613,4 +614,27 @@ img {
     width: 100%; /* Optional: Adjusts the width of the description box */
     max-width: 600px; /* Optional: Sets a max-width for larger screens */
     text-align: center; /* Center aligns the text */
+}
+
+#scrollDownFAB {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #6200EA; /* Material Design Primary Color */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 56px;
+    height: 56px;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.24);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#scrollDownFAB:hover {
+    background-color: #3700B3; /* Darker shade for hover effect */
 }
