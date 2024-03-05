@@ -37,7 +37,7 @@ const scrollActive = () =>{
             sectionsClass.classList.add('active-link')
         }else{
             sectionsClass.classList.remove('active-link')
-        }                                                    
+        }
     })
 }
 window.addEventListener('scroll', scrollActive)
