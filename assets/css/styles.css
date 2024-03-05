@@ -9,6 +9,7 @@
   /* HSL color mode */
   --hue-color: 224;
   --first-color: hsl(var(--hue-color), 89%, 60%);
+  --first-color-light: hsl(var(--hue-color), 89%, 75%);
   --second-color: hsl(var(--hue-color), 56%, 12%);
   /*===== Fuente y tipografia =====*/
   --body-font: "Poppins", sans-serif;
@@ -17,6 +18,7 @@
   --h2-font-size: 1.25rem;
   --normal-font-size: .938rem;
   --smaller-font-size: .75rem;
+
   /*===== Margenes =====*/
   --mb-2: 1rem;
   --mb-4: 2rem;
@@ -562,21 +564,22 @@ img {
 }
 
 .advantage-btn {
-    background-color: var(--first-color);
+    background-color: var(--second-color);
     color: #fff;
     border: none;
     padding: 0.75rem 1.5rem;
     cursor: pointer;
     border-radius: 0.5rem; /* Optional: Adds rounded corners to the buttons */
     transition: background-color 0.3s; /* Smooth transition for hover effect */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 .advantage-btn:hover {
-    background-color: var(--first-color-light); /* Lighten the button color on hover */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
 }
 
 .advantage-btn--active {
-    background-color: var(--second-color); /* Change to a different color to indicate active state */
+    background-color: var(--first-color); /* Change to a different color to indicate active state */
 }
 
 .advantage-description {
