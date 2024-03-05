@@ -269,7 +269,7 @@ img {
 }
 .button-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem; /* 设置按钮之间的间距 */
     text-align: center; /* 将文本居中显示 */
 }
@@ -475,8 +475,8 @@ img {
     margin-bottom: var(--mb-6);
   }
   .section-title::after {
-    width: 80px;
-    top: 3rem;
+    width: 250px;
+    top: 4rem;
   }
   .nav {
     height: calc(var(--header-height) + 1.5rem);
@@ -534,7 +534,7 @@ img {
 
 .authors__container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(10.5rem, 1fr)); /* 创建一个响应式的多列布局 */
+    grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr)); /* 创建一个响应式的多列布局 */
     gap: 0.2rem; /* 设置列之间和行之间的间距 */
     justify-content: center; /* 在容器中水平居中对齐网格项 */
     align-items: start; /* 在容器中顶部对齐网格项 */
