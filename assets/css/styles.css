@@ -507,3 +507,35 @@ img {
     width: 450px;
   }
 }
+
+.authors__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* 创建一个响应式的多列布局 */
+    gap: 20px; /* 设置列之间和行之间的间距 */
+    justify-content: center; /* 在容器中水平居中对齐网格项 */
+    align-items: start; /* 在容器中顶部对齐网格项 */
+}
+
+.author {
+    display: flex; /* 使用flex布局 */
+    flex-direction: column; /* 设置为垂直布局 */
+    align-items: center; /* 在flex容器中水平居中对齐子项 */
+    text-align: center; /* 将文本居中对齐 */
+}
+
+.author__img {
+    width: 100px; /* 图片宽度 */
+    height: 100px; /* 图片高度，保持宽高比为1:1 */
+    border-radius: 50%; /* 创建圆形图片 */
+    margin-bottom: 10px; /* 图片与下方文本之间的间距 */
+}
+
+.author__name {
+    font-size: 20px; /* 名字的字体大小 */
+    font-weight: bold; /* 名字的字体加粗 */
+    margin: 0; /* 移除默认的外边距 */
+}
+
+.author__description {
+    font-size: 16px; /* 描述的字体大小 */
+}
