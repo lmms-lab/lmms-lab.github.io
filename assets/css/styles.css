@@ -276,11 +276,17 @@ img {
 
 /* ===== ABOUT =====*/
 .about__container {
-  row-gap: 2rem;
-  text-align: center;
+    padding: 20px; /* Adjust the padding as needed */
+    margin: 20px 0; /* Adds vertical spacing above and below the container */
 }
+
 .about__subtitle {
-  margin-bottom: var(--mb-2);
+    margin-bottom: 10px; /* Adds space below the subtitle */
+}
+
+.about__text {
+    text-align: justify; /* This will justify the text, which can improve readability */
+    line-height: 1.6; /* Adjusts the space between lines of text */
 }
 .about__img {
   justify-self: center;
