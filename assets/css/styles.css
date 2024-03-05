@@ -138,7 +138,7 @@ img {
     position: fixed;
     top: var(--header-height);
     right: -100%;
-    width: 80%;
+    width: 40%;
     height: 100%;
     padding: 2rem;
     background-color: var(--second-color);
@@ -272,6 +272,18 @@ img {
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem; /* 设置按钮之间的间距 */
     text-align: center; /* 将文本居中显示 */
+}
+.button-container {
+    display: flex;
+    justify-content: center; /* Center buttons horizontally */
+    align-items: center; /* Center buttons vertically */
+    gap: 1rem; /* Adjust the space between buttons */
+}
+
+@media screen and (max-width: 600px) { /* Adjust the max-width as needed */
+    .button-container {
+        flex-direction: column; /* Stack buttons vertically on smaller screens */
+    }
 }
 
 
@@ -623,8 +635,8 @@ img {
 
 #scrollDownFAB {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    bottom: 1.5rem;
+    right: 1.5rem;
     background-color: #6200EA; /* Material Design Primary Color */
     color: white;
     border: none;
