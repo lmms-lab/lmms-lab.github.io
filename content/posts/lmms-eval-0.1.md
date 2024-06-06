@@ -31,7 +31,9 @@ We believe our effort could provide an efficient interface for the detailed comp
 
 ## Important Features
 
-{% include figure.liquid loading="eager" path="assets/img/teaser.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+![](https://lmms-lab.github.io/images/lmms-eval-1.0/teaser.webp)
+
+<!-- {% include figure.liquid loading="eager" path="assets/img/teaser.png" class="img-fluid rounded z-depth-1" zoomable=true %} -->
 
 <!-- <p align="center" width="100%">
 <img src="assets/img/teaser.png"  width="100%" height="100%">
@@ -61,13 +63,15 @@ Below are the total runtime on different datasets using 4 x A100 40G.
 
 We are hosting more than 40 (and increasing) datasets on [huggingface/lmms-lab](https://huggingface.co/lmms-lab), we carefully converted these datasets from original sources and included all variants, versions and splits. Now they can be directly accessed without any burden of data preprocessing. They also serve for the purpose of visualizing the data and grasping the sense of evaluation tasks distribution.
 
-{% include figure.liquid loading="eager" path="assets/img/ai2d.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+<!-- {% include figure.liquid loading="eager" path="assets/img/ai2d.png" class="img-fluid rounded z-depth-1" zoomable=true %} -->
+
+![](https://lmms-lab.github.io/images/lmms-eval-1.0/ai2d.webp)
 
 ### Detailed Logging Utilites
 
 We provide detailed logging utilities to help you understand the evaluation process and results. The logs include the model args, generation parameters, input question, model response, and ground truth answer. You can also record every details and visualize them inside runs on Weights & Biases.
 
-![](../assets/images/pages/lmms-eval-1.0/wandb_table.webp)
+![](https://lmms-lab.github.io/images/lmms-eval-1.0/wandb_table.webp)
 
 <!-- <p align="center" width="100%">
 <img src="https://i.postimg.cc/W1c1vBDJ/Wechat-IMG1993.png"  width="100%" height="80%">
@@ -79,7 +83,9 @@ As demonstrated by the extensive table below, we aim to provide detailed informa
 
 We provide a Google Sheet for the detailed results of the LLaVA series models on different datasets. You can access the sheet [here](https://docs.google.com/spreadsheets/d/1a5ImfdKATDI8T7Cwh6eH-bEsnQFzanFraFUgcS9KHWc/edit?usp=sharing). It's a live sheet, and we are updating it with new results.
 
-{% include figure.liquid loading="eager" path="assets/img/sheet_table.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+<!-- {% include figure.liquid loading="eager" path="assets/img/sheet_table.png" class="img-fluid rounded z-depth-1" zoomable=true %} -->
+
+![](https://lmms-lab.github.io/images/lmms-eval-1.0/sheet_table.webp)
 
 <!-- <p align="center" width="100%">
 <img src="https://i.postimg.cc/jdw497NS/WX20240307-162526-2x.png"  width="100%" height="80%">
@@ -149,46 +155,6 @@ Names inside `()` indicate the actual task name referred in the config file.
   - Multi-DocVQA Test `(multidocvqa_test)`
 
 ... and more.
-
-<!-- <table
-  id="table"
-  data-toggle="table"
-  data-height="460"
-  data-click-to-select="true"
-  data-search="true"
-  data-url="{{ '/assets/json/datasets.json' | relative_url }}">
-  <thead>
-    <tr>
-      <th data-field="state" data-checkbox="true"></th>
-      <th data-field="Name">Name</th>
-      <th data-field="ID">ID</th>
-    </tr>
-  </thead>
-</table>
-
-<d-code block language="shell">
-  <div id="selectedIdsDisplay"></div>
-</d-code>
-
-<script>
-  $(document).ready(function() {
-    var selectedIds = [];
-
-    $('#table').on('check.bs.table uncheck.bs.table check-all.bs.table uncheck-all.bs.table', function (e, row) {
-      var id = row.ID; // 假设每行的ID字段是'ID'
-      if (e.type === 'check' || e.type === 'check-all') {
-        if (!selectedIds.includes(id)) { // 避免重复添加
-          selectedIds.push(id);
-        }
-      } else {
-        selectedIds = selectedIds.filter(function(value) { return value !== id; });
-      }
-
-      // 将选中的ID用逗号连接起来，并显示在页面元素中
-      document.getElementById('selectedIdsDisplay').textContent = selectedIds.join(',');
-    });
-  });
-</script> -->
 
 ## Citations
 
