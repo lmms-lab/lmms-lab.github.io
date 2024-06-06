@@ -62,37 +62,12 @@ params:
       - text: "To gauge how advanced these models are, we use a variety of evaluation benchmarks. These benchmarks are tools that help us understand the capabilities of these models, showing us how close we are to achieving AGI. To address this challenge, we introduce lmms-eval, an evaluation framework meticulously crafted for consistent and efficient evaluation of LMM."
   p2:
     heading: "LLaVA-NeXT"
-    image: "images/pages/hacktoberfest.jpg"
+    image: "images/pages/correlation.png"
     content:
       - text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur at purus non enim commodo tincidunt vel in nulla. Aenean pretium dolor non ultricies bibendum. Etiam quis blandit enim. Nunc condimentum ut lorem in faucibus. Phasellus varius ligula et commodo tristique. Nunc sodales nisl nec laoreet vehicula. Donec velit nibh, sollicitudin at nulla a, egestas dignissim eros. Sed lacinia hendrerit interdum. Vestibulum pellentesque sem venenatis nisl tempor accumsan sit amet tempus felis. Mauris leo diam, porttitor nec bibendum id, tempus ac nulla. Etiam congue ornare erat at convallis. Donec in nisi dapibus, mattis risus vel, imperdiet enim. Donec fermentum sit amet tortor nec tincidunt. Nam nec lectus tortor. Nunc sit amet laoreet orci, porta ornare massa. Phasellus eget lorem mi. Nam eleifend ultricies sapien, quis mollis leo bibendum at. Quisque viverra lorem sit amet magna aliquet, et dignissim arcu eleifend."
   p3:
-    heading: "Backed by world-renowned investors"
-    content:
-      - text: "Sagittis scelerisque nulla cursus in enim consectetur quam. Dictum urna sed consectetur neque tristique pellentesque. Blandit amet, sed aenean erat arcu morbi. Cursus faucibus nunc nisl netus morbi vel porttitor vitae ut. Amet vitae fames senectus vitae."
-    links:
-      - text: Meet our investors and advisors
-        url: "#"
-    logos:
-      - identifier: a
-        image: "images/global/sample-logo.svg"
-        alt: "a"
-      - identifier: b
-      - identifier: c
-      - identifier: d
-      - identifier: e
-      - identifier: f
-  p4:
-    heading: "From the blog"
-    content:
-      - text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa libero labore natus atque, ducimus sed."
-  p5:
-    heading: "Stay Up to Date"
-    content:
-      - text: "Sagittis scelerisque nulla cursus in enim consectetur quam. Dictum urna sed consectetur neque tristique pellentesque."
-    action: "#"
-    label: "Email address"
-    placeholder: "Enter your email"
-    button: "Notify me"
+    heading: "LLaVA-NeXT-Video"
+    image: "images/pages/multi_frame.png"
 
   social_media:
     github:
@@ -111,21 +86,21 @@ params:
 
 menu:
   main:
-    - identifier: prose
-      name: Prose
-      url: /prose/
+    - identifier: team
+      name: Team
+      url: /team/
       weight: 10
-    - identifier: about
-      name: About
-      url: /about/
+    - identifier: news
+      name: News
+      url: /news/
       weight: 20
-    - identifier: categories
-      pre: dropdown
-      name: Categories
-      weight: 30
-    - identifier: dropdown
+    - identifier: blogs
+      name: Blogs
+      url: /categories/blog/
+      weight: 20
+    - identifier: more
       pre: complexdropdown
-      name: Dropdown
+      name: More
       weight: 40
     - identifier: contact
       name: Contact
@@ -140,46 +115,42 @@ menu:
       name: About
       url: /about/
       weight: 20
-  dropdown:
-    - identifier: appearance
+  More:
+    - identifier: github
       pre: stars # can be stars, comments or piechart
-      name: Appearance
-      post: "Easy customization"
-      url: "#"
+      name: Github
+      post: "See what we're grinding on"
+      url: "https://github.com/EvolvingLMMs-Lab"
       weight: 10
-    - identifier: comments
+    - identifier: huggingface
       pre: comments # can be stars, comments or piechart
-      name: Comments
-      post: "Check your latest comments"
-      url: "#"
+      name: Huggingface
+      post: "See what we're opensourcing"
+      url: "https://huggingface.co/lmms-lab"
       weight: 20
-    - identifier: analytics
+    - identifier: related
       pre: piechart # can be stars, comments or piechart
-      name: Analytics
-      post: "Take a look at your statistics"
-      url: "#"
+      name: Related
+      post: "Take a look at our related projects"
+      url: "https://github.com/LLaVA-VL/LLaVA-NeXT"
       weight: 30
   footer:
-    - identifier: about
-      name: About
-      url: /about/
+    - identifier: team
+      name: Team
+      url: /team/
       weight: 10
+    - identifier: news
+      name: News
+      url: /news/
+      weight: 20
     - identifier: blog
       name: Blog
       url: /categories/blog/
-      weight: 20
-    - identifier: news
-      name: News
-      url: /categories/news/
       weight: 30
-    - identifier: prose
-      name: Prose
-      url: /prose/
-      weight: 40
     - identifier: contact
       name: Contact
       url: /contact/
-      weight: 50
+      weight: 40
 
 markup:
   goldmark:
