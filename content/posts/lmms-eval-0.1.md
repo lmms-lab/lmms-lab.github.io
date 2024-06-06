@@ -1,5 +1,5 @@
 ---
-title: "Accelerating the Development of Large Multimodal Models with LMMs-Eval"
+title: Accelerating the Development of Large Multimodal Models with LMMs-Eval
 date: 2024-03-07
 draft: false
 language: en
