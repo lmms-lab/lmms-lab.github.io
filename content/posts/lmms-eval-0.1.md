@@ -31,7 +31,7 @@ We believe our effort could provide an efficient interface for the detailed comp
 
 ## Important Features
 
-![](https://lmms-lab.github.io/images/lmms-eval-1.0/teaser.webp)
+![](https://lmms-lab.github.io/blog-images/lmms-eval-1.0/teaser.webp)
 
 <!-- {% include figure.liquid loading="eager" path="assets/img/teaser.png" class="img-fluid rounded z-depth-1" zoomable=true %} -->
 
@@ -65,13 +65,13 @@ We are hosting more than 40 (and increasing) datasets on [huggingface/lmms-lab](
 
 <!-- {% include figure.liquid loading="eager" path="assets/img/ai2d.png" class="img-fluid rounded z-depth-1" zoomable=true %} -->
 
-![](https://lmms-lab.github.io/images/lmms-eval-1.0/ai2d.webp)
+![](https://lmms-lab.github.io/blog-images/lmms-eval-1.0/ai2d.webp)
 
 ### Detailed Logging Utilites
 
 We provide detailed logging utilities to help you understand the evaluation process and results. The logs include the model args, generation parameters, input question, model response, and ground truth answer. You can also record every details and visualize them inside runs on Weights & Biases.
 
-![](https://lmms-lab.github.io/images/lmms-eval-1.0/wandb_table.webp)
+![](https://lmms-lab.github.io/blog-images/lmms-eval-1.0/wandb_table.webp)
 
 <!-- <p align="center" width="100%">
 <img src="https://i.postimg.cc/W1c1vBDJ/Wechat-IMG1993.png"  width="100%" height="80%">
@@ -85,7 +85,7 @@ We provide a Google Sheet for the detailed results of the LLaVA series models on
 
 <!-- {% include figure.liquid loading="eager" path="assets/img/sheet_table.png" class="img-fluid rounded z-depth-1" zoomable=true %} -->
 
-![](https://lmms-lab.github.io/images/lmms-eval-1.0/sheet_table.webp)
+![](https://lmms-lab.github.io/blog-images/lmms-eval-1.0/sheet_table.webp)
 
 <!-- <p align="center" width="100%">
 <img src="https://i.postimg.cc/jdw497NS/WX20240307-162526-2x.png"  width="100%" height="80%">
