@@ -8,7 +8,7 @@ summary: One command evaluation API for fast and thorough evaluation of LMMs, pr
 # author: TailBliss
 # authorimage: ../assets/images/global/author.webp
 categories: Blog
-tags: Blog
+tags: lmms-eval
 ---
 
 ## Introduction

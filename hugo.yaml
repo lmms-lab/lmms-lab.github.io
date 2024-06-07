@@ -102,10 +102,6 @@ menu:
       pre: complexdropdown
       name: More
       weight: 40
-    - identifier: contact
-      name: Contact
-      url: /contact/
-      weight: 50
   categories:
     - identifier: prose
       name: Prose
@@ -147,10 +143,6 @@ menu:
       name: Blog
       url: /categories/blog/
       weight: 30
-    - identifier: contact
-      name: Contact
-      url: /contact/
-      weight: 40
 
 markup:
   goldmark:
