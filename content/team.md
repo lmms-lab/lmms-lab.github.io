@@ -22,6 +22,7 @@ We are always looking for new members to join us, so if you are interested, plea
 - [Kaicheng Zhang](https://www.linkedin.com/in/kaichen-zhang-014b17219/?originalSubdomain=sg), Undergraduate Student, NTU, Singapore
 - [Fanyi Pu](https://pufanyi.github.io/), Undergraduate Student, NTU, Singapore
 - [Kairui Hu](https://www.linkedin.com/in/kairuihu/?originalSubdomain=sg), Undergraduate Student, NTU, Singapore
+- [Jingkang Yang](https://jingkang50.github.io/), PhD Student, NTU, Singapore
 - [Shuai Liu](https://github.com/choiszt), MS Student, NTU, Singapore
 
 ## Faculty Team
