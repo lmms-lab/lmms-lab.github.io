@@ -11,7 +11,28 @@ categories: Blog
 tags: lmms-eval
 ---
 
+<p>
+  <span style="color: gray; font-size: 16px;">
+    <a href="https://brianboli.com/">Bo Li<sup>*</sup></a>, 
+    <a href="https://veiled-texture-20c.notion.site/Peiyuan-Zhang-ab24b48621c9491db767a76df860873a">Peiyuan Zhang<sup>*</sup></a>, 
+    <a href="https://www.linkedin.com/in/kaichen-zhang-014b17219/?originalSubdomain=sg">Kaichen Zhang<sup>*</sup></a>, 
+    <a href="https://pufanyi.github.io/">Fanyi Pu<sup>*</sup></a>, 
+    <a href="https://www.linkedin.com/in/joshua-adrian-cahyono-5230b814b/">Joshua Adrian Cahyono</a>, 
+    <a href="https://scholar.google.com/citations?user=Bn01uUMAAAAJ&hl=zh-CN">Xinrun Du</a>, 
+    <a href="https://scholar.google.com/citations?user=kMui170AAAAJ&hl=zh-CN">Yuhao Dong</a>, 
+    <a href="https://hliu.cc/">Haotian Liu</a>, 
+    <a href="https://zhangyuanhan-ai.github.io/">Yuanhan Zhang</a>, 
+    <a href="https://scholar.google.com/citations?user=qyTrq4kAAAAJ&hl=zh-CN">Ge Zhang</a>, 
+    <a href="https://chunyuan.li/">Chunyuan Li</a>, 
+    <a href="https://liuziwei7.github.io/">Ziwei Liu</a>
+  </span>
+</p>
+<p style="font-size: smaller;">
+  <sup>*</sup> indicates equal contribution.
+</p>
+
 ## Introduction
+
 
 In today's world, we're on a thrilling quest for Artificial General Intelligence (AGI), driven by a passion that reminds us of the excitement surrounding the 1960s moon landing. At the heart of this adventure are the incredible large language models (LLMs) and large multimodal models (LMMs). These models are like brilliant minds that can understand, learn, and interact with a vast array of human tasks, marking a significant leap toward our goal.
 
