@@ -68,7 +68,7 @@ Table 1: Video Dataset Meta Information
     <td class="border px-8 py-4">Open-ended</td>
     <td class="border px-8 py-4">GPT-Eval</td>
     <td class="border px-8 py-4">Internet</td>
-    <td class="border px-8 py-4">120s</td>
+    <td class="border px-8 py-4">117.3s</td>
   </tr>
   <tr class="hover:bg-gray-50">
     <td class="border px-8 py-4">EgoSchema</td>
@@ -113,7 +113,7 @@ Table 1: Video Dataset Meta Information
     <td class="border px-8 py-4">Open-ended</td>
     <td class="border px-8 py-4">GPT_Eval</td>
     <td class="border px-8 py-4">ActivityNet-200</td>
-    <td class="border px-8 py-4">120s</td>
+    <td class="border px-8 py-4">108.0s</td>
   </tr>
     <tr class="hover:bg-gray-50">
         <td class="border px-8 py-4">VideoDetailCaptions</td>
@@ -122,7 +122,7 @@ Table 1: Video Dataset Meta Information
         <td class="border px-8 py-4">Open-ended</td>
         <td class="border px-8 py-4">GPT_Eval</td>
         <td class="border px-8 py-4">ActivityNet-200</td>
-        <td class="border px-8 py-4">120s</td>
+        <td class="border px-8 py-4">108.0s</td>
     </tr>
     <tr class="hover:bg-gray-50">
         <td class="border px-8 py-4">NextQA</td>
@@ -157,7 +157,7 @@ Table 1: Video Dataset Meta Information
         <td class="border px-8 py-4">tempcompass_caption_matching</td>
         <td class="border px-8 py-4">Accuracy</td>
         <td class="border px-8 py-4">Internet</td>
-        <td class="border px-8 py-4">30s</td>
+        <td class="border px-8 py-4">11.9s</td>
     </tr>
     <tr class="hover:bg-gray-50">
         <td class="border px-8 py-4">Video-MME</td>
