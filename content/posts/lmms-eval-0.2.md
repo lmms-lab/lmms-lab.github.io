@@ -93,7 +93,7 @@ Table 1: Video Dataset Meta Information
     <td class="border px-8 py-4">Test</td>
     <td class="border px-8 py-4">vatex_test</td>
     <td class="border px-8 py-4">Caption Matching</td>
-    <td class="border px-8 py-4">Accuracy</td>
+    <td class="border px-8 py-4"style="white-space: nowrap">Bleu; METEOR; ROUGE_L; CIDEr></td>
     <td class="border px-8 py-4">YouTube</td>
     <td class="border px-8 py-4">147.6s</td>
   </tr>
@@ -102,9 +102,9 @@ Table 1: Video Dataset Meta Information
     <td class="border px-8 py-4">Validation</td>
     <td class="border px-8 py-4">vatex_val_zh</td>
     <td class="border px-8 py-4">Caption Matching</td>
-    <td class="border px-8 py-4">Accuracy</td>
+    <td class="border px-8 py-4"style="white-space: nowrap">Bleu; METEOR; ROUGE_L; CIDEr></td>
     <td class="border px-8 py-4">YouTube</td>
-    <td class="border px-8 py-4">165.0s</td>
+    <td class="border px-8 py-4">165s</td>
   </tr>
   <tr class="hover:bg-gray-50">
     <td class="border px-8 py-4">VideoChatGPT</td>
@@ -113,7 +113,7 @@ Table 1: Video Dataset Meta Information
     <td class="border px-8 py-4">Open-ended</td>
     <td class="border px-8 py-4">GPT_Eval</td>
     <td class="border px-8 py-4">ActivityNet-200</td>
-    <td class="border px-8 py-4">108.0s</td>
+    <td class="border px-8 py-4">108s</td>
   </tr>
     <tr class="hover:bg-gray-50">
         <td class="border px-8 py-4">VideoDetailCaptions</td>
@@ -122,7 +122,7 @@ Table 1: Video Dataset Meta Information
         <td class="border px-8 py-4">Open-ended</td>
         <td class="border px-8 py-4">GPT_Eval</td>
         <td class="border px-8 py-4">ActivityNet-200</td>
-        <td class="border px-8 py-4">108.0s</td>
+        <td class="border px-8 py-4">108s</td>
     </tr>
     <tr class="hover:bg-gray-50">
         <td class="border px-8 py-4">NextQA</td>
