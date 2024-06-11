@@ -93,7 +93,7 @@ Table 1: Video Dataset Meta Information
     <td class="border px-8 py-4">Test</td>
     <td class="border px-8 py-4">vatex_test</td>
     <td class="border px-8 py-4">Caption Matching</td>
-    <td class="border px-8 py-4"style="white-space: nowrap">Bleu; METEOR; ROUGE_L; CIDEr></td>
+    <td class="border px-8 py-4"style="white-space: nowrap">Bleu; METEOR; ROUGE_L; CIDEr</td>
     <td class="border px-8 py-4">YouTube</td>
     <td class="border px-8 py-4">147.6s</td>
   </tr>
@@ -102,7 +102,7 @@ Table 1: Video Dataset Meta Information
     <td class="border px-8 py-4">Validation</td>
     <td class="border px-8 py-4">vatex_val_zh</td>
     <td class="border px-8 py-4">Caption Matching</td>
-    <td class="border px-8 py-4"style="white-space: nowrap">Bleu; METEOR; ROUGE_L; CIDEr></td>
+    <td class="border px-8 py-4"style="white-space: nowrap">Bleu; METEOR; ROUGE_L; CIDEr</td>
     <td class="border px-8 py-4">YouTube</td>
     <td class="border px-8 py-4">165s</td>
   </tr>
