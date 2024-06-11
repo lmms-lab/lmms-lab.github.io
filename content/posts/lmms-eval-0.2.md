@@ -13,7 +13,7 @@ tags: video models
 
 <p>
   <span style="color: gray; font-size: 16px;">
-    <a href="">Kairui Hu</a>
+    <a href="https://kairuihu.github.io/">Kairui Hu</a>
     <a href="https://www.linkedin.com/in/kaichen-zhang-014b17219/?originalSubdomain=sg">Kaichen Zhang</a>, 
     <a href="https://pufanyi.github.io/">Fanyi Pu</a>, 
     <a href="https://zhangyuanhan-ai.github.io/">Yuanhan Zhang</a>, 
@@ -153,8 +153,9 @@ Table 1: Video Dataset Meta Information
     </tr>
     <tr class="hover:bg-gray-50">
         <td class="border px-8 py-4">TempCompass</td>
-        <td class="border px-8 py-4">Caption Matching</td>
-        <td class="border px-8 py-4">tempcompass_caption_matching</td>
+        <td class="border px-8 py-4">Default</td>
+        <td class="border px-8 py-4">tempcompass</td>
+        <td class="border px-8 py-4">MCQ; Y/N; Captioning; Caption Matching</td>
         <td class="border px-8 py-4">Accuracy</td>
         <td class="border px-8 py-4">Internet</td>
         <td class="border px-8 py-4">11.9s</td>
@@ -285,18 +286,18 @@ Here’s a breakdown of adding video datasets support, especially on how we impl
         `
 
 ### **Supported Video Tasks**
-  1. ActivityNet-QA
-  2. EgoSchema
-  3. YouCook2
-  4. VATEX
-  5. VATEX-ZH
-  6. VideoChatGPT
-  7. VideoDetailCaptions
-  8. NextQA
-  9. CVRR-ES
-  10. Perception Test
-  11. TempCompass
-  12. Video-MME
+  1. <a href="https://github.com/MILVLG/activitynet-qa">ActivityNet-QA</a>
+  2. <a href="https://github.com/egoschema/EgoSchema/">EgoSchema</a>
+  3. <a href="http://youcook2.eecs.umich.edu/">YouCook2</a>
+  4. <a href="https://eric-xw.github.io/vatex-website/index.html">VATEX</a>
+  5. <a href="https://eric-xw.github.io/vatex-website/index.html">VATEX-ZH</a>
+  6. <a href="https://github.com/mbzuai-oryx/Video-ChatGPT/">VideoChatGPT</a>
+  7. <a href="https://github.com/EvolvingLMMs-Lab/lmms-eval-internal/blob/internal_main_dev/lmms_eval/tasks/video_detail_description/README.md">VideoDetailCaptions</a>
+  8. <a href="https://github.com/doc-doc/NExT-QA">NextQA</a>
+  9. <a href="https://github.com/mbzuai-oryx/CVRR-Evaluation-Suite/">CVRR-ES</a>
+  10. <a href="https://github.com/google-deepmind/perception_test">Perception Test</a>
+  11. <a href="https://github.com/llyx97/TempCompass">TempCompass</a>
+  12. <a href="https://github.com/BradyFU/Video-MME">Video-MME</a>
   
 ### **Support Video Models**
 
