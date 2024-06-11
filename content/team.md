@@ -21,7 +21,7 @@ We are always looking for new members to join us, so if you are interested, plea
 - [Peiyuan Zhang](https://veiled-texture-20c.notion.site/Peiyuan-Zhang-ab24b48621c9491db767a76df860873a), Research Assistant, NTU -> PhD Student, UCSD
 - [Kaichen Zhang](https://www.linkedin.com/in/kaichen-zhang-014b17219/?originalSubdomain=sg), Undergraduate Student, NTU, Singapore
 - [Fanyi Pu](https://pufanyi.github.io/), Undergraduate Student, NTU, Singapore
-- [Kairui Hu](https://www.linkedin.com/in/kairuihu/?originalSubdomain=sg), Undergraduate Student, NTU, Singapore
+- [Kairui Hu](https://kairuihu.github.io/), Undergraduate Student, NTU, Singapore
 - [Jingkang Yang](https://jingkang50.github.io/), PhD Student, NTU, Singapore
 - [Shuai Liu](https://github.com/choiszt), MS Student, NTU, Singapore
 
