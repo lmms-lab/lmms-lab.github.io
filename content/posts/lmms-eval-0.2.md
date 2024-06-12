@@ -533,7 +533,6 @@ During this period, we received the following Pull Requests (PRs):
 - ConBench (officially from the authors, PKU/Bytedance)
 - MathVerse (officially from the authors, CUHK)
 - MM-UPD (officially from the authors, University of Tokyo)
-- Multi-lingual MMMU (officially from the authors, CUHK)
 - WebSRC (from Hunter Heiden)
 - ScreeSpot (from Hunter Heiden)
 - RealworldQA (from Fanyi Pu, NTU)
