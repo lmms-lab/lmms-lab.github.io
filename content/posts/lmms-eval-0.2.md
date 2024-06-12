@@ -57,9 +57,7 @@ Nanyang Technical University, Singapore
 
 In the journey towards multimodal intelligence, the development of LMMs has progressed remarkably, transitioning from handling static images to processing complex video inputs. This evolution is crucial, enabling models to understand and interpret dynamic scenes with temporal dependencies, motion dynamics, and contextual continuity. The importance of video evaluation is also increasing across various applications. However, there has been a noticeable absence of comprehensive benchmarks to evaluate the diverse array of video tasks. The introduction of `lmms-eval/v0.2.0` is both necessary and significant as it addresses this critical gap in the evaluation of video-based LMMs.
 
-Building upon the success of `lmms-eval/v0.1.0`, `lmms-eval/v0.2.0` is a comprehensive benchmark designed specifically for video datasets. It ensures fairness by consolidating various benchmarks and evaluations into a single framework, providing consistent results across multiple datasets and tasks. This facilitates the fair comparison of different models using the same standardized benchmark. `lmms-eval/v0.2.0` is capable of running multiple datasets and tasks simultaneously, ensuring a thorough and efficient evaluation process. This framework accelerates the model iteration lifecycle, making it easier for researchers and developers to evaluate the performance of video LMMs.
-
-By providing a fair, comprehensive, and efficient evaluation framework, `lmms-eval/v0.2.0`is set to make a significant impact on the research and development community.
+Building upon the success of `lmms-eval/v0.1.0`, `lmms-eval/v0.2.0` makes major upgrades on incorporating video tasks and models, and more feature updates on improved pipelines for both image and video tasks, more image models, and fixed previous community issues.
 
 ## Video Evaluation in LMMs
 
@@ -264,8 +262,8 @@ Table 2. Alignment Check for Video Datasets
     <td class="border px-8 py-4">ActivityNetQA</td>
     <td class="border px-8 py-4">activitynetqa</td>
     <td class="border px-8 py-4">LLaVA-NeXT-Video-7B</td>
-    <td class="border px-8 py-4">53.5% / 3.2</td>
-    <td class="border px-8 py-4">Bo running on it</td>
+    <td class="border px-8 py-4">53.5% </td>
+    <td class="border px-8 py-4">52.72% </td>
   </tr>
   <tr class="hover:bg-gray-50">
     <td class="border px-8 py-4">VideoDetailCaptions</td>
@@ -275,11 +273,11 @@ Table 2. Alignment Check for Video Datasets
     <td class="border px-8 py-4">Score: 3.50 / 5</td>
   </tr>
   <tr class="hover:bg-gray-50">
-    <td class="border px-8 py-4">Video-MME</td>
+    <td class="border px-8 py-4">Video-MME (wo/subs)</td>
     <td class="border px-8 py-4">videomme</td>
     <td class="border px-8 py-4">LLaVA-NeXT-Video-7B</td>
     <td class="border px-8 py-4">-</td>
-    <td class="border px-8 py-4">Bo running on it</td>
+    <td class="border px-8 py-4">41.98%</td>
   </tr>
 </table>
 
