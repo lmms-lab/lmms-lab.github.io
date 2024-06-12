@@ -174,19 +174,18 @@ Table 1: Video Dataset Meta Information
 
 ### Alignment Check for Video Datasets
 
-<!-- | Dataset             | Subset                                  | Model               | Original Reported | LMMs-Eval        | Official website for reference                                          |
-| ------------------- | --------------------------------------- | ------------------- | ----------------- | ---------------- | ----------------------------------------------------------------------- |
-| EgoSchema           | egoschema_mc_ppl                        | LLaVA-NeXT-Video-7B | -                 | Bo running on it | https://github.com/egoschema/EgoSchema/tree/main/benchmarking/mPLUG-Owl |
-| CVRR-ES             | cvrr_multiple_actions_in_a_single_video | Video-ChatGPT       | 27.67             | 28.31            | https://github.com/mbzuai-oryx/CVRR-Evaluation-Suite/tree/main          |
-| TempCompass         | tempcompass_caption_matching            | LLaVA-1.5-13B       | 59.50             | 59.35            | https://github.com/llyx97/TempCompass.git                               |
-| VideoChatGPT        | videochatgpt_temporal                   | LLaVA-NeXT-Video-7B | 3.60              | Bo running on it | https://github.com/mbzuai-oryx/Video-ChatGPT.git                        |
-| NextQA              | nextqa_oe_test                          | LLaVA-NeXT-Video-7B | 26.90             | Bo running on it |                                                                         |
-| VATEX               | vatex_test                              | Gemini-1.5-Pro      |                   | Bo running on it |                                                                         |
-| ActivityNetQA       | activitynetqa                           | LLaVA-NeXT-Video-7B | 53.5/3.2          | Bo running on it |                                                                         |
-| VideoDetailCaptions | video_dc499                             | LLaVA-NeXT-Video-7B | 3.32              | Bo running on it |                                                                         |
-| Perception Test     | perceptiontest_val_mc                   | LLaVA-NeXT-Video-7B | -                 | Bo running on it |                                                                         |
-| YouCook2            | youcook2_val                            | LLaVA-NeXT-Video-7B | -                 | Bo running on it |                                                                         |
-| Video-MME           | videomme                                | LLaVA-NeXT-Video-7B | -                 | Bo running on it |                                                                         | -->
+| Dataset             | Subset                                  | Model               | Original Reported | LMMs-Eval        |
+| ------------------- | --------------------------------------- | ------------------- | ----------------- | ---------------- |
+| EgoSchema(0-shot)           | egoschema_subset_mc_ppl                        | LLaVA-NeXT-Video-7B | -                 | 50.60% |
+| CVRR-ES             | cvrr_multiple_actions_in_a_single_video | Video-ChatGPT       | 27.67%             | 28.31%            |
+| CVRR-ES             | cvrr                                    | LLaVA-NeXT-Video-7B | -             | 44.29%            |
+| TempCompass         | tempcompass_caption_matching            | LLaVA-1.5-13B       | 59.50%             | 59.35%            |
+| VideoChatGPT        | videochatgpt_temporal                   | LLaVA-NeXT-Video-7B | Score: 2.60 / 5             | Score: 2.67 / 5  |
+| NextQA              | nextqa_oe_test                          | LLaVA-NeXT-Video-7B | 26.90%            | 26.61% |
+| VATEX               | vatex_test                              | LLaVA-NeXT-Video-7B | -                 | CIDEr: 39.28 |
+| ActivityNetQA       | activitynetqa                           | LLaVA-NeXT-Video-7B | 53.5% / 3.2          | Bo running on it |
+| VideoDetailCaptions | video_dc499                             | LLaVA-NeXT-Video-7B | Score: 3.32 / 5              | Score: 3.50 / 5 |
+| Video-MME           | videomme                                | LLaVA-NeXT-Video-7B | -                 | Bo running on it |
 
 ## More Details and Feature Updates with `v0.2.0`
 
@@ -351,5 +350,4 @@ We have supported more video models that can be used in LMMs-Eval. We now suppor
 
     We aligned the results of LLaVA-NeXT 34B by combining images into one. That is, in multi-image testing, **all images are stitched together into one**, and tested as a single image. When tested separately (`mmmu_val`), the score was 46.7, and after combination (`mmmu_group_img_val`), the score was 50.1.
 
-    Example:
-
+    Example: 
