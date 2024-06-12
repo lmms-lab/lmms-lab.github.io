@@ -174,18 +174,85 @@ Table 1: Video Dataset Meta Information
 
 ### Alignment Check for Video Datasets
 
-| Dataset             | Subset                                  | Model               | Original Reported | LMMs-Eval        |
-| ------------------- | --------------------------------------- | ------------------- | ----------------- | ---------------- |
-| EgoSchema(0-shot)           | egoschema_subset_mc_ppl                        | LLaVA-NeXT-Video-7B | -                 | 50.60% |
-| CVRR-ES             | cvrr_multiple_actions_in_a_single_video | Video-ChatGPT       | 27.67%             | 28.31%            |
-| CVRR-ES             | cvrr                                    | LLaVA-NeXT-Video-7B | -             | 44.29%            |
-| TempCompass         | tempcompass_caption_matching            | LLaVA-1.5-13B       | 59.50%             | 59.35%            |
-| VideoChatGPT        | videochatgpt_temporal                   | LLaVA-NeXT-Video-7B | Score: 2.60 / 5             | Score: 2.67 / 5  |
-| NextQA              | nextqa_oe_test                          | LLaVA-NeXT-Video-7B | 26.90%            | 26.61% |
-| VATEX               | vatex_test                              | LLaVA-NeXT-Video-7B | -                 | CIDEr: 39.28 |
-| ActivityNetQA       | activitynetqa                           | LLaVA-NeXT-Video-7B | 53.5% / 3.2          | Bo running on it |
-| VideoDetailCaptions | video_dc499                             | LLaVA-NeXT-Video-7B | Score: 3.32 / 5              | Score: 3.50 / 5 |
-| Video-MME           | videomme                                | LLaVA-NeXT-Video-7B | -                 | Bo running on it |
+<table style="white-space: nowrap; display: flex; justify-content: center; align-items: center;">
+  <tr class="bg-white-100">
+    <th class="bg-blue-100 border text-left px-8 py-4">Dataset</th>
+    <th class="bg-blue-100 border text-left px-8 py-4">Subset</th>
+    <th class="bg-blue-100 border text-left px-8 py-4">Model</th>
+    <th class="bg-blue-100 border text-left px-8 py-4">Original Reported</th>
+    <th class="bg-blue-100 border text-left px-8 py-4">LMMs-Eval</th>
+  </tr>
+  <tr class="hover:bg-gray-50">
+    <td class="border px-8 py-4">EgoSchema(0-shot)</td>
+    <td class="border px-8 py-4">egoschema_subset_mc_ppl</td>
+    <td class="border px-8 py-4">LLaVA-NeXT-Video-7B</td>
+    <td class="border px-8 py-4">-</td>
+    <td class="border px-8 py-4">50.60%</td>
+  </tr>
+  <tr class="hover:bg-gray-50">
+    <td class="border px-8 py-4">CVRR-ES</td>
+    <td class="border px-8 py-4">cvrr_multiple_actions_in_a_single_video</td>
+    <td class="border px-8 py-4">Video-ChatGPT</td>
+    <td class="border px-8 py-4">27.67%</td>
+    <td class="border px-8 py-4">28.31%</td>
+  </tr>
+  <tr class="hover:bg-gray-50">
+    <td class="border px-8 py-4">CVRR-ES</td>
+    <td class="border px-8 py-4">cvrr</td>
+    <td class="border px-8 py-4">LLaVA-NeXT-Video-7B</td>
+    <td class="border px-8 py-4">-</td>
+    <td class="border px-8 py-4">44.29%</td>
+  </tr>
+  <tr class="hover:bg-gray-50">
+    <td class="border px-8 py-4">TempCompass</td>
+    <td class="border px-8 py-4">tempcompass_caption_matching</td>
+    <td class="border px-8 py-4">LLaVA-1.5-13B</td>
+    <td class="border px-8 py-4">59.50%</td>
+    <td class="border px-8 py-4">59.35%</td>
+  </tr>
+  <tr class="hover:bg-gray-50">
+    <td class="border px-8 py-4">VideoChatGPT</td>
+    <td class="border px-8 py-4">videochatgpt_temporal</td>
+    <td class="border px-8 py-4">LLaVA-NeXT-Video-7B</td>
+    <td class="border px-8 py-4">Score: 2.60 / 5</td>
+    <td class="border px-8 py-4">Score: 2.67 / 5</td>
+  </tr>
+  <tr class="hover:bg-gray-50">
+    <td class="border px-8 py-4">NextQA</td>
+    <td class="border px-8 py-4">nextqa_oe_test</td>
+    <td class="border px-8 py-4">LLaVA-NeXT-Video-7B</td>
+    <td class="border px-8 py-4">26.90%</td>
+    <td class="border px-8 py-4">26.61%</td>
+  </tr>
+  <tr class="hover:bg-gray-50">
+    <td class="border px-8 py-4">VATEX</td>
+    <td class="border px-8 py-4">vatex_test</td>
+    <td class="border px-8 py-4">LLaVA-NeXT-Video-7B</td>
+    <td class="border px-8 py-4">-</td>
+    <td class="border px-8 py-4">CIDEr: 39.28</td>
+  </tr>
+  <tr class="hover:bg-gray-50">
+    <td class="border px-8 py-4">ActivityNetQA</td>
+    <td class="border px-8 py-4">activitynetqa</td>
+    <td class="border px-8 py-4">LLaVA-NeXT-Video-7B</td>
+    <td class="border px-8 py-4">53.5% / 3.2</td>
+    <td class="border px-8 py-4">Bo running on it</td>
+  </tr>
+  <tr class="hover:bg-gray-50">
+    <td class="border px-8 py-4">VideoDetailCaptions</td>
+    <td class="border px-8 py-4">video_dc499</td>
+    <td class="border px-8 py-4">LLaVA-NeXT-Video-7B</td>
+    <td class="border px-8 py-4">Score: 3.32 / 5</td>
+    <td class="border px-8 py-4">Score: 3.50 / 5</td>
+  </tr>
+  <tr class="hover:bg-gray-50">
+    <td class="border px-8 py-4">Video-MME</td>
+    <td class="border px-8 py-4">videomme</td>
+    <td class="border px-8 py-4">LLaVA-NeXT-Video-7B</td>
+    <td class="border px-8 py-4">-</td>
+    <td class="border px-8 py-4">Bo running on it</td>
+  </tr>
+</table>
 
 ## More Details and Feature Updates with `v0.2.0`
 
@@ -349,3 +416,15 @@ We have supported more video models that can be used in LMMs-Eval. We now suppor
  5. mmmu_group_img_val
 
     We aligned the results of LLaVA-NeXT 34B by combining images into one. That is, in multi-image testing, **all images are stitched together into one**, and tested as a single image. When tested separately (`mmmu_val`), the score was 46.7, and after combination (`mmmu_group_img_val`), the score was 50.1.
+    
+    ```bash
+    A collimated beam containing two different frequencies of light travels through vacuum and is incident on a piece of glass. Which of the schematics below depicts the phenomenon of dispersion within the glass in a qualitative correct manner? Select (e) if none of the options are qualitatively correct.
+    (A) <image 1>
+    (B) <image 2>
+    (C) <image 3>
+    (D) <image 4>
+
+    Answer with the option's letter from the given choices directly.
+    ```
+
+    ![Example](https://github.com/lmms-lab/lmms-lab.github.io/blob/main/images/mmmu.png)
