@@ -518,3 +518,24 @@ We have supported more video models that can be used in LMMs-Eval. We now suppor
 3. [LLaMA-VID](https://github.com/dvlab-research/LLaMA-VID)
 4. [Video-ChatGPT](https://github.com/mbzuai-oryx/Video-ChatGPT)
 5. [MPLUG-OWL](https://github.com/X-PLUG/mPLUG-Owl)
+
+### **Community Support**
+
+During this period, we received the following Pull Requests (PRs):
+
+**Datasets:**
+ • VCR: Vision_Caption_Restoration (officially from the authors, MILA)
+ • ConBench (officially from the authors, PKU/Bytedance)
+ • MathVerse (officially from the authors, CUHK)
+ • MM-UPD (officially from the authors, University of Tokyo)
+ • Multi-lingual MMMU (officially from the authors, CUHK)
+ • WebSRC (from Hunter Heiden)
+ • ScreeSpot (from Hunter Heiden)
+ • RealworldQA (from Fanyi Pu, NTU)
+ • Multi-lingual LLaVA-W (from Gagan Bhatia, UBC)
+
+**Models:**
+ • LLaVA-HF (officially from Huggingface)
+ • Idefics-2 (from the lmms-lab team)
+ • microsoft/Phi-3-Vision (officially from the authors, Microsoft)
+ • LLaVA-SGlang (from the lams-lab team)
