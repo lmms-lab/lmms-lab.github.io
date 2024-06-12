@@ -2009,7 +2009,7 @@ EmojiSymbols;
 
 /* Custom CSS end */
 
-.dark\:prose-invert:is(.dark *) {
+/* .dark\:prose-invert:is(.dark *) {
   --tw-prose-body: var(--tw-prose-invert-body);
   --tw-prose-headings: var(--tw-prose-invert-headings);
   --tw-prose-lead: var(--tw-prose-invert-lead);
@@ -2028,7 +2028,7 @@ EmojiSymbols;
   --tw-prose-pre-bg: var(--tw-prose-invert-pre-bg);
   --tw-prose-th-borders: var(--tw-prose-invert-th-borders);
   --tw-prose-td-borders: var(--tw-prose-invert-td-borders);
-}
+} */
 
 .hover\:bg-gray-50:hover {
   --tw-bg-opacity: 1;
@@ -2142,7 +2142,7 @@ EmojiSymbols;
   opacity: 0.7;
 }
 
-.dark\:border-gray-600:is(.dark *) {
+/* .dark\:border-gray-600:is(.dark *) {
   --tw-border-opacity: 1;
   border-color: rgb(75 85 99 / var(--tw-border-opacity));
 }
@@ -2257,7 +2257,7 @@ EmojiSymbols;
 .dark\:focus\:ring-primary-900:focus:is(.dark *) {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(10 12 106 / var(--tw-ring-opacity));
-}
+} */
 
 @media (min-width: 640px) {
   .sm\:relative {
