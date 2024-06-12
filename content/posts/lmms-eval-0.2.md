@@ -427,7 +427,7 @@ We have supported more video models that can be used in LMMs-Eval. We now suppor
     Answer with the option's letter from the given choices directly.
     ```
 
-    ![Example](mmmu.png)
+    ![Example](../../../images/mmmu.png)
 
 
   6. Added `predict_only` and `from_log` modes**
