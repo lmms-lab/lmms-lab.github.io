@@ -343,13 +343,13 @@ Here’s a breakdown of adding video datasets support, especially on how we impl
     After evaluating each data instance, we aggregate the individual results to generate the overall evaluation metrics. Finally, we provide a summary table that consolidates all the evaluation results, similar to the one in Google’s Gemini report.
 5.  **Grouped Tasks:**
     For tasks with multiple subsets, we group all subset tasks together. For example, the VideoChatGPT dataset includes three subsets: generic, temporal, and consistency. By running `--task videochatgpt`, all three subsets can be evaluated together, eliminating the need to specify each subset individually. We summarize all the grouped task names in Table 1. This pipeline ensures a thorough and standardized evaluation process for video LMMs, facilitating consistent and reliable performance assessment across various tasks and datasets. - This code denotes how we organize the group of tasks together.
-    `yaml
+    ```yaml
     group: videochatgpt
     task:
     - videochatgpt_gen
     - videochatgpt_temporal
     - videochatgpt_consistency
-        `
+    ```
 
 ### **Supported Video Tasks**
   1. <a href="https://github.com/MILVLG/activitynet-qa">ActivityNet-QA</a>
