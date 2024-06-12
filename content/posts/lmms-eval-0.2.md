@@ -521,6 +521,8 @@ We have supported more video models that can be used in LMMs-Eval. We now suppor
 
 During this period, we received the following Pull Requests (PRs):
 
+> Details are in [lmms-eval/v0.2.0 release notes](https://github.com/EvolvingLMMs-Lab/lmms-eval/releases/tag/untagged-9057ff0e9a72d5a5846f)
+
 **Datasets:**
 
 - VCR: Vision_Caption_Restoration (officially from the authors, MILA)
