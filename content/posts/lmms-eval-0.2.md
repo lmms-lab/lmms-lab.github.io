@@ -423,6 +423,8 @@ Here’s a breakdown of adding video datasets support, especially on how we impl
 
     We aligned the results of LLaVA-NeXT 34B with previously reported values. In our previous evaluation, for the questions with multiple images, we concatenated them into one. When tested separately (`mmmu_val`), the score was 46.7, and after we do the concatenation operation (in lmms-eval, you could switch to use `tasks=mmmu_group_img_val`), the score was 50.1 for LLaVA-NeXT 34B.
 
+    <details>
+    <summary>Example Images and QA Pairs</summary>
     <p align="center">
     <a href="https://postimg.cc/2brN0TMk">
         <img src="https://i.postimg.cc/JnB742Qk/mmmu-group.png" alt="mmmu-group.png">
@@ -438,6 +440,8 @@ Here’s a breakdown of adding video datasets support, especially on how we impl
 
     Answer with the option's letter from the given choices directly.
     ```
+    </details>
+    <br>
 
 
   6. **Predict Only Mode - Only Inference, No Evaluation**
