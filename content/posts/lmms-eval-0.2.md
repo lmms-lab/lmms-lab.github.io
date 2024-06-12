@@ -1,5 +1,5 @@
 ---
-title: Embracing Video Evaluations with LMMs-Eval Upgrades v0.2.0
+title: Embracing Video Evaluations with LMMs-Eval
 date: 2024-06-10
 draft: false
 language: en
@@ -11,19 +11,47 @@ categories: Blog
 tags: video models
 ---
 
-<p>
-  <span style="color: gray; font-size: 16px;">
-    <a href="https://kairuihu.github.io/">Kairui Hu</a>
-    <a href="https://www.linkedin.com/in/kaichen-zhang-014b17219/?originalSubdomain=sg">Kaichen Zhang</a>, 
-    <a href="https://pufanyi.github.io/">Fanyi Pu</a>, 
-    <a href="https://zhangyuanhan-ai.github.io/">Yuanhan Zhang</a>, 
-    <a href="https://brianboli.com/">Bo Li</a>, 
+<p style="font-size: 16px; line-height: 1.4;">
+  <span style="color: gray; font-size: 18px;">
+    <a href="https://kairuihu.github.io/">Kairui Hu<sup>*</sup></a>, &nbsp;
+    <a href="https://pufanyi.github.io/">Fanyi Pu<sup>*</sup></a>, &nbsp;
+    <a href="https://www.linkedin.com/in/kaichen-zhang-014b17219/?originalSubdomain=sg">Kaichen Zhang<sup>*</sup></a>, &nbsp;
+    <a href="https://github.com/choiszt">Shuai Liu<sup>*</sup></a>, &nbsp;
+    <a href="https://zhangyuanhan-ai.github.io/">Yuanhan Zhang<sup>*</sup></a> &nbsp;
+    <br>
+    <a href="https://brianboli.com/">Bo Li<sup>*;&dagger;</sup></a>, &nbsp;
     <a href="https://liuziwei7.github.io/">Ziwei Liu</a>
   </span>
 </p>
-<p style="font-size: smaller;">
-  <sup>*</sup> indicates equal contribution.
+<p style="font-size: 16px; line-height: 1.2;">
+Nanyang Technical University, Singapore
+<br>
+<br>
+<sup>*</sup>indicates equal contribution.
+<sup>&dagger;</sup>development lead.
 </p>
+
+## Table of Contents
+
+<ul style="color: gray; font-size: 14px">
+  <li><a href="#introduction">Introduction</a></li>
+  <li><a href="#video-evaluation-in-lmms">Video Evaluation in LMMs</a>
+    <ul>
+      <li><a href="#frame-extraction-for-evaluation">Frame Extraction for Evaluation</a></li>
+      <li><a href="#challenges-with-audio-integration">Challenges with Audio Integration</a></li>
+      <li><a href="#meta-information-for-video-datasets">Meta Information for Video Datasets</a></li>
+      <li><a href="#alignment-check-for-video-datasets">Alignment Check for Video Datasets</a></li>
+    </ul>
+  </li>
+  <li><a href="#more-details-and-feature-updates-with-v020">More Details and Feature Updates with <code>v0.2.0</code></a>
+    <ul>
+      <li><a href="#improved-pipeline-for-video-evaluations">Improved Pipeline for Video Evaluations</a></li>
+      <li><a href="#improved-overall-evaluation-pipeline">Improved Overall Evaluation Pipeline</a></li>
+      <li><a href="#supported-video-tasks">Supported Video Tasks</a></li>
+      <li><a href="#supported-video-models">Supported Video Models</a></li>
+    </ul>
+  </li>
+</ul>
 
 ## Introduction
 
@@ -174,6 +202,7 @@ Table 1: Video Dataset Meta Information
 
 ### Alignment Check for Video Datasets
 
+Table 2. Alignment Check for Video Datasets
 <table style="white-space: nowrap; display: flex; justify-content: center; align-items: center;">
   <tr class="bg-white-100">
     <th class="bg-blue-100 border text-left px-8 py-4">Dataset</th>
@@ -351,33 +380,11 @@ Here’s a breakdown of adding video datasets support, especially on how we impl
     - videochatgpt_consistency
     ```
 
-### **Supported Video Tasks**
-  1. <a href="https://github.com/MILVLG/activitynet-qa">ActivityNet-QA</a>
-  2. <a href="https://github.com/egoschema/EgoSchema/">EgoSchema</a>
-  3. <a href="http://youcook2.eecs.umich.edu/">YouCook2</a>
-  4. <a href="https://eric-xw.github.io/vatex-website/index.html">VATEX</a>
-  5. <a href="https://eric-xw.github.io/vatex-website/index.html">VATEX-ZH</a>
-  6. <a href="https://github.com/mbzuai-oryx/Video-ChatGPT/">VideoChatGPT</a>
-  7. <a href="https://github.com/EvolvingLMMs-Lab/lmms-eval-internal/blob/internal_main_dev/lmms_eval/tasks/video_detail_description/README.md">VideoDetailCaptions</a>
-  8. <a href="https://github.com/doc-doc/NExT-QA">NextQA</a>
-  9. <a href="https://github.com/mbzuai-oryx/CVRR-Evaluation-Suite/">CVRR-ES</a>
-  10. <a href="https://github.com/google-deepmind/perception_test">Perception Test</a>
-  11. <a href="https://github.com/llyx97/TempCompass">TempCompass</a>
-  12. <a href="https://github.com/BradyFU/Video-MME">Video-MME</a>
-  
-### **Support Video Models**
 
-We have supported more video models that can be used in LMMs-Eval. We now support evaluating video datasets using a one line command.
-
-1. LLaVA-NeXT-Video
-2. Video-LLaVA
-3. LLaMA-VID
-4. Video-ChatGPT
-5. MPLUG-OWL
-
-### **More Updates**
+### **Improved Overall Evaluation Pipeline**
 
  1. For newly added tasks with different splits and metrics, we have adopted a naming rule in the format `{name}_{split}_{metric}`. For instance, `perceptiontest_val_mcppl` refers to the validation split of the PerceptionTest evaluation dataset, using multiple choice perplexity as the evaluation metric.
+   
  2. We support `llava-next` series models with sglang. You can use the following command to launch evaluation with sglang support, that’s much more efficient when running on `llava-next-72b/110b`
 
     ```bash
@@ -413,10 +420,17 @@ We have supported more video models that can be used in LMMs-Eval. We now suppor
     ```
 
  4. We found that sometimes the dataset downloading process will throw `Retry` or `HTTP Timedout` errors. To prevent this, we recommend disabling `hf_transfer` mechanism by setting this in your environment `export HF_HUB_ENABLE_HF_TRANSFER="0"`
+   
  5. mmmu_group_img_val
 
     We aligned the results of LLaVA-NeXT 34B by combining images into one. That is, in multi-image testing, **all images are stitched together into one**, and tested as a single image. When tested separately (`mmmu_val`), the score was 46.7, and after combination (`mmmu_group_img_val`), the score was 50.1.
-    
+
+    <p align="center">
+    <a href="https://postimg.cc/2brN0TMk">
+        <img src="https://i.postimg.cc/JnB742Qk/mmmu-group.png" alt="mmmu-group.png">
+        </a>
+    </p>
+
     ```bash
     A collimated beam containing two different frequencies of light travels through vacuum and is incident on a piece of glass. Which of the schematics below depicts the phenomenon of dispersion within the glass in a qualitative correct manner? Select (e) if none of the options are qualitatively correct.
     (A) <image 1>
@@ -427,59 +441,80 @@ We have supported more video models that can be used in LMMs-Eval. We now suppor
     Answer with the option's letter from the given choices directly.
     ```
 
-    ![Example](../../../images/mmmu.png)
 
+  6. **Predict Only Mode - Only Inference, No Evaluation**
 
-  6. Added `predict_only` and `from_log` modes**
+        In some cases, you may want to obtain only the inference results, without triggering the evaluation process. For this purpose, we have integrate the **`predict_only`** mode from the original `lmms-eval`. This feature allows you to obtain model inference results without performing further evaluation. **It is particularly useful when you do not need to evaluate your model results, for instance, if the dataset requires ChatGPT-based evaluation but you do not want to use the OpenAI API.**
 
--- **Predict Only Mode - Only Inference, No Evaluation**
+        To use the **`predict_only`** mode, add the **`--predict_only`** flag to your command. This will override the original evaluation process with a bypass function after obtaining the model inference results and simply save the results as logs. 
 
-In some cases, you may want to obtain only the inference results, without triggering the evaluation process. For this purpose, we have integrate the **`predict_only`** mode from the original `lmms-eval`. This feature allows you to obtain model inference results without performing further evaluation. **It is particularly useful when you do not need to evaluate your model results, for instance, if the dataset requires ChatGPT-based evaluation but you do not want to use the OpenAI API.**
+  7. **From-Logs Mode - Evaluation Based on Log Files from `predict_only` mode**
 
-To use the **`predict_only`** mode, add the **`--predict_only`** flag to your command. This will override the original evaluation process with a bypass function after obtaining the model inference results and simply save the results as logs. 
+        ```bash
+        accelerate launch -m lmms_eval \
+        --model=from_log \
+        --tasks=<taskname> \ 
+        --batch_size=1 \
+        --log_samples \
+        --output_path=./logs/ \
+        --model_args=logs=<path_to_log_directory>,model_name=<model_name>,model_args \
+        --verbosity=DEBUG
+        ```
 
--- **From-Logs Mode - Evaluation Based on Log Files from `predict_only` mode**
+        In some cases, you may want to evaluate model performance using pre-existing inference results. For this purpose, we have designed the **`from_log`** mode. This feature allows you to evaluate model performance directly from inference results recorded in the `logs/` directory. This mode saves time and enhances portability, consistency, and reproducibility. **It is particularly useful when you already have model inference results and wish to avoid running the inference process again.** 
 
-```bash
-accelerate launch -m lmms_eval \
---model=from_log \
---tasks=<taskname> \ 
---batch_size=1 \
---log_samples \
---output_path=./logs/ \
---model_args=logs=<path_to_log_directory>,model_name=<model_name>,model_args \
---verbosity=DEBUG
-```
+        Currently, we only support inference results stored in the `logs/` directory, which is the log file generated from our pipeline. Hence currently, the file template of these results is pre-defined. If you need to evaluate the inference result generated by yourself, you may have to convert your file into the same template as those under `logs/`.
 
-In some cases, you may want to evaluate model performance using pre-existing inference results. For this purpose, we have designed the **`from_log`** mode. This feature allows you to evaluate model performance directly from inference results recorded in the `logs/` directory. This mode saves time and enhances portability, consistency, and reproducibility. **It is particularly useful when you already have model inference results and wish to avoid running the inference process again.** 
+        To use the **`from_log`** mode for performance evaluation based on existing log files, you can run the following command. You can specify the `task_name`, `path_to_log_directory`, `model_name`and  `model_args`(if specified). Our framework will traverse through all the log files within the specified directory and find the most recent log file for evaluation.
 
-Currently, we only support inference results stored in the `logs/` directory, which is the log file generated from our pipeline. Hence currently, the file template of these results is pre-defined. If you need to evaluate the inference result generated by yourself, you may have to convert your file into the same template as those under `logs/`.
+   8. **Combined Use of Two Modes**
+   
+        You can use the two modes together: using the **`predict_only`** mode to obtain model inference results, and using the **`from_log`** mode to evaluate the generated inference results. This enhances the overall consistency and reproducibility of our framework.
 
-To use the **`from_log`** mode for performance evaluation based on existing log files, you can run the following command. You can specify the `task_name`, `path_to_log_directory`, `model_name`and  `model_args`(if specified). Our framework will traverse through all the log files within the specified directory and find the most recent log file for evaluation.
+        You can use the following command to run the two modes together:
 
--- **Combined Use of Two Modes:**
-You can use the two modes together: using the **`predict_only`** mode to obtain model inference results, and using the **`from_log`** mode to evaluate the generated inference results. This enhances the overall consistency and reproducibility of our framework.
+        ```bash
+        # Open predict_only mode to inference
+        accelerate launch --num_processes 8 --main_process_port 12345 -m lmms_eval \
+            --model <model_name> \
+            --tasks $TASK \
+            --batch_size 1 \
+            --log_samples \
+            --log_samples_suffix <model_name> \
+            --output_path ./logs/ \
+            --predict_only
 
-You can use the following command to run the two modes together:
+        # Open from_log mode to evaluate
+        accelerate launch --num_processes 8 --main_process_port 12345 -m lmms_eval \
+            --model from_log \
+            --model_args model_name=<model_name>\
+            --tasks $TASKS \
+            --batch_size 1 \
+            --log_samples \
+            --log_samples_suffix <model_name> \
+            --output_path ./logs/
+        ```
 
-```bash
-# Open predict_only mode to inference
-accelerate launch --num_processes 8 --main_process_port 12345 -m lmms_eval \
-    --model <model_name> \
-    --tasks $TASK \
-    --batch_size 1 \
-    --log_samples \
-    --log_samples_suffix <model_name> \
-    --output_path ./logs/ \
-    --predict_only
+### **Supported Video Tasks**
+  1. <a href="https://github.com/MILVLG/activitynet-qa">ActivityNet-QA</a>
+  2. <a href="https://github.com/egoschema/EgoSchema/">EgoSchema</a>
+  3. <a href="http://youcook2.eecs.umich.edu/">YouCook2</a>
+  4. <a href="https://eric-xw.github.io/vatex-website/index.html">VATEX</a>
+  5. <a href="https://eric-xw.github.io/vatex-website/index.html">VATEX-ZH</a>
+  6. <a href="https://github.com/mbzuai-oryx/Video-ChatGPT/">VideoChatGPT</a>
+  7. <a href="https://github.com/EvolvingLMMs-Lab/lmms-eval-internal/blob/internal_main_dev/lmms_eval/tasks/video_detail_description/README.md">VideoDetailCaptions</a>
+  8. <a href="https://github.com/doc-doc/NExT-QA">NextQA</a>
+  9. <a href="https://github.com/mbzuai-oryx/CVRR-Evaluation-Suite/">CVRR-ES</a>
+  10. <a href="https://github.com/google-deepmind/perception_test">Perception Test</a>
+  11. <a href="https://github.com/llyx97/TempCompass">TempCompass</a>
+  12. <a href="https://github.com/BradyFU/Video-MME">Video-MME</a>
+  
+### **Supported Video Models**
 
-# Open from_log mode to evaluate
-accelerate launch --num_processes 8 --main_process_port 12345 -m lmms_eval \
-    --model from_log \
-    --model_args model_name=<model_name>\
-    --tasks $TASKS \
-    --batch_size 1 \
-    --log_samples \
-    --log_samples_suffix <model_name> \
-    --output_path ./logs/
-```
+We have supported more video models that can be used in LMMs-Eval. We now support evaluating video datasets using a one line command.
+
+1. [LLaVA-NeXT-Video](https://huggingface.co/collections/lmms-lab/llava-next-video-661e86f5e8dabc3ff793c944)
+2. [Video-LLaVA](https://github.com/PKU-YuanGroup/Video-LLaVA)
+3. [LLaMA-VID](https://github.com/dvlab-research/LLaMA-VID)
+4. [Video-ChatGPT](https://github.com/mbzuai-oryx/Video-ChatGPT)
+5. [MPLUG-OWL](https://github.com/X-PLUG/mPLUG-Owl)
