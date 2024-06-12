@@ -77,123 +77,123 @@ One of the most concerning issues with these evaluations is the lack of focus on
 
 Table 1: Video Dataset Meta Information
 
-<table style="white-space: nowrap; display: flex; justify-content: center; align-items: center;">
+<table style="white-space: nowrap; display: flex; justify-content: center; align-items: center; font-size: 0.85em;">
   <tr class="bg-white-100">
-    <th class="bg-blue-100 border text-left" style="padding: 16px 0.25em">Dataset</th>
-    <th class="bg-blue-100 border text-left" style="padding: 16px 0.25em">Split</th>
-    <th class="bg-blue-100 border text-left" style="padding: 16px 0.25em">Task Name</th>
-    <th class="bg-blue-100 border text-left" style="padding: 16px 0.25em">Task Format</th>
-    <th class="bg-blue-100 border text-left" style="padding: 16px 0.25em">Evaluation Metric</th>
-    <th class="bg-blue-100 border text-left" style="padding: 16px 0.25em">Video Source</th>
-    <th class="bg-blue-100 border text-left" style="padding: 16px 0.25em">Average Length</th>
+    <th class="bg-blue-100 border text-left" style="padding: 16px 0.75em">Dataset</th>
+    <th class="bg-blue-100 border text-left" style="padding: 16px 0.75em">Split</th>
+    <th class="bg-blue-100 border text-left" style="padding: 16px 0.75em">Task Name</th>
+    <th class="bg-blue-100 border text-left" style="padding: 16px 0.75em">Task Format</th>
+    <th class="bg-blue-100 border text-left" style="padding: 16px 0.75em">Evaluation Metric</th>
+    <th class="bg-blue-100 border text-left" style="padding: 16px 0.75em">Video Source</th>
+    <th class="bg-blue-100 border text-left" style="padding: 16px 0.75em">Average Length</th>
   </tr>
   <tr class="hover:bg-gray-50">
-    <td class="border" style="padding: 16px 0.25em">ActivityNet-QA</td>
-    <td class="border" style="padding: 16px 0.25em">Test</td>
-    <td class="border" style="padding: 16px 0.25em">activitynetqa</td>
-    <td class="border" style="padding: 16px 0.25em">Open-ended</td>
-    <td class="border" style="padding: 16px 0.25em">GPT-Eval</td>
-    <td class="border" style="padding: 16px 0.25em">Internet</td>
-    <td class="border" style="padding: 16px 0.25em">117.3s</td>
+    <td class="border" style="padding: 16px 0.75em">ActivityNet-QA</td>
+    <td class="border" style="padding: 16px 0.75em">Test</td>
+    <td class="border" style="padding: 16px 0.75em">activitynetqa</td>
+    <td class="border" style="padding: 16px 0.75em">Open-ended</td>
+    <td class="border" style="padding: 16px 0.75em">GPT-Eval</td>
+    <td class="border" style="padding: 16px 0.75em">Internet</td>
+    <td class="border" style="padding: 16px 0.75em">117.3s</td>
   </tr>
   <tr class="hover:bg-gray-50">
-    <td class="border" style="padding: 16px 0.25em">EgoSchema</td>
-    <td class="border" style="padding: 16px 0.25em">Full</td>
-    <td class="border" style="padding: 16px 0.25em">egoschema</td>
-    <td class="border" style="padding: 16px 0.25em">MCQ</td>
-    <td class="border" style="padding: 16px 0.25em">Submission</td>
-    <td class="border" style="padding: 16px 0.25em">Ego4D</td>
-    <td class="border" style="padding: 16px 0.25em">180s</td>
+    <td class="border" style="padding: 16px 0.75em">EgoSchema</td>
+    <td class="border" style="padding: 16px 0.75em">Full</td>
+    <td class="border" style="padding: 16px 0.75em">egoschema</td>
+    <td class="border" style="padding: 16px 0.75em">MCQ</td>
+    <td class="border" style="padding: 16px 0.75em">Submission</td>
+    <td class="border" style="padding: 16px 0.75em">Ego4D</td>
+    <td class="border" style="padding: 16px 0.75em">180s</td>
   </tr>
   <tr class="hover:bg-gray-50">
-    <td class="border" style="padding: 16px 0.25em">YouCook2</td>
-    <td class="border" style="padding: 16px 0.25em">Validation</td>
-    <td class="border" style="padding: 16px 0.25em">youcook2_val</td>
-    <td class="border" style="padding: 16px 0.25em">MCQ</td>
-    <td class="border" style="padding: 16px 0.25em">Bleu; METEOR; ROUGE_L; CIDEr</td>
-    <td class="border" style="padding: 16px 0.25em">YouTube</td>
-    <td class="border" style="padding: 16px 0.25em">311.6s</td>
+    <td class="border" style="padding: 16px 0.75em">YouCook2</td>
+    <td class="border" style="padding: 16px 0.75em">Validation</td>
+    <td class="border" style="padding: 16px 0.75em">youcook2_val</td>
+    <td class="border" style="padding: 16px 0.75em">MCQ</td>
+    <td class="border" style="padding: 16px 0.75em">Bleu; METEOR; ROUGE_L; CIDEr</td>
+    <td class="border" style="padding: 16px 0.75em">YouTube</td>
+    <td class="border" style="padding: 16px 0.75em">311.6s</td>
   </tr>
   <tr class="hover:bg-gray-50">
-    <td class="border" style="padding: 16px 0.25em">Vatex</td>
-    <td class="border" style="padding: 16px 0.25em">Test</td>
-    <td class="border" style="padding: 16px 0.25em">vatex_test</td>
-    <td class="border" style="padding: 16px 0.25em">Caption Matching</td>
-    <td class="border" style="padding: 16px 0.25em">Bleu; METEOR; ROUGE_L; CIDEr</td>
-    <td class="border" style="padding: 16px 0.25em">YouTube</td>
-    <td class="border" style="padding: 16px 0.25em">147.6s</td>
+    <td class="border" style="padding: 16px 0.75em">Vatex</td>
+    <td class="border" style="padding: 16px 0.75em">Test</td>
+    <td class="border" style="padding: 16px 0.75em">vatex_test</td>
+    <td class="border" style="padding: 16px 0.75em">Caption Matching</td>
+    <td class="border" style="padding: 16px 0.75em">Bleu; METEOR; ROUGE_L; CIDEr</td>
+    <td class="border" style="padding: 16px 0.75em">YouTube</td>
+    <td class="border" style="padding: 16px 0.75em">147.6s</td>
   </tr>
   <tr class="hover:bg-gray-50">
-    <td class="border" style="padding: 16px 0.25em">Vatex-ZH</td>
-    <td class="border" style="padding: 16px 0.25em">Validation</td>
-    <td class="border" style="padding: 16px 0.25em">vatex_val_zh</td>
-    <td class="border" style="padding: 16px 0.25em">    Caption Matching</td>
-    <td class="border" style="padding: 16px 0.25em">Bleu; METEOR; ROUGE_L; CIDEr</td>
-    <td class="border" style="padding: 16px 0.25em">YouTube</td>
-    <td class="border" style="padding: 16px 0.25em">165s</td>
+    <td class="border" style="padding: 16px 0.75em">Vatex-ZH</td>
+    <td class="border" style="padding: 16px 0.75em">Validation</td>
+    <td class="border" style="padding: 16px 0.75em">vatex_val_zh</td>
+    <td class="border" style="padding: 16px 0.75em">    Caption Matching</td>
+    <td class="border" style="padding: 16px 0.75em">Bleu; METEOR; ROUGE_L; CIDEr</td>
+    <td class="border" style="padding: 16px 0.75em">YouTube</td>
+    <td class="border" style="padding: 16px 0.75em">165s</td>
   </tr>
   <tr class="hover:bg-gray-50">
-    <td class="border" style="padding: 16px 0.25em">VideoChatGPT</td>
-    <td class="border" style="padding: 16px 0.25em">Test</td>
-    <td class="border" style="padding: 16px 0.25em">videochatgpt</td>
-    <td class="border" style="padding: 16px 0.25em">Open-ended</td>
-    <td class="border" style="padding: 16px 0.25em">GPT_Eval</td>
-    <td class="border" style="padding: 16px 0.25em">ActivityNet-200</td>
-    <td class="border" style="padding: 16px 0.25em">108s</td>
+    <td class="border" style="padding: 16px 0.75em">VideoChatGPT</td>
+    <td class="border" style="padding: 16px 0.75em">Test</td>
+    <td class="border" style="padding: 16px 0.75em">videochatgpt</td>
+    <td class="border" style="padding: 16px 0.75em">Open-ended</td>
+    <td class="border" style="padding: 16px 0.75em">GPT_Eval</td>
+    <td class="border" style="padding: 16px 0.75em">ActivityNet-200</td>
+    <td class="border" style="padding: 16px 0.75em">108s</td>
   </tr>
     <tr class="hover:bg-gray-50">
-        <td class="border" style="padding: 16px 0.25em">VideoDetailCaptions</td>
-        <td class="border" style="padding: 16px 0.25em">Test</td>
-        <td class="border" style="padding: 16px 0.25em">video_dc499</td>
-        <td class="border" style="padding: 16px 0.25em">Open-ended</td>
-        <td class="border" style="padding: 16px 0.25em">GPT_Eval</td>
-        <td class="border" style="padding: 16px 0.25em">ActivityNet-200</td>
-        <td class="border" style="padding: 16px 0.25em">108s</td>
+        <td class="border" style="padding: 16px 0.75em">VideoDetailCaptions</td>
+        <td class="border" style="padding: 16px 0.75em">Test</td>
+        <td class="border" style="padding: 16px 0.75em">video_dc499</td>
+        <td class="border" style="padding: 16px 0.75em">Open-ended</td>
+        <td class="border" style="padding: 16px 0.75em">GPT_Eval</td>
+        <td class="border" style="padding: 16px 0.75em">ActivityNet-200</td>
+        <td class="border" style="padding: 16px 0.75em">108s</td>
     </tr>
     <tr class="hover:bg-gray-50">
-        <td class="border" style="padding: 16px 0.25em">NextQA</td>
-        <td class="border" style="padding: 16px 0.25em">OE (Text / Validation), MC (Test)</td>
-        <td class="border" style="padding: 16px 0.25em">nextqa</td>
-        <td class="border" style="padding: 16px 0.25em">MCQ / Open-ended</td>
-        <td class="border" style="padding: 16px 0.25em">MC: Exact Match; OE: WUPS</td>
-        <td class="border" style="padding: 16px 0.25em">YFCC-100M</td>
-        <td class="border" style="padding: 16px 0.25em">44s</td>
+        <td class="border" style="padding: 16px 0.75em">NextQA</td>
+        <td class="border" style="padding: 16px 0.75em">OE (Text / Validation), MC (Test)</td>
+        <td class="border" style="padding: 16px 0.75em">nextqa</td>
+        <td class="border" style="padding: 16px 0.75em">MCQ / Open-ended</td>
+        <td class="border" style="padding: 16px 0.75em">MC: Exact Match; OE: WUPS</td>
+        <td class="border" style="padding: 16px 0.75em">YFCC-100M</td>
+        <td class="border" style="padding: 16px 0.75em">44s</td>
     </tr>
     <tr class="hover:bg-gray-50">
-        <td class="border" style="padding: 16px 0.25em">CVRR-ES</td>
-        <td class="border" style="padding: 16px 0.25em">Default</td>
-        <td class="border" style="padding: 16px 0.25em">cvrr</td>
-        <td class="border" style="padding: 16px 0.25em">Open-ended</td>
-        <td class="border" style="padding: 16px 0.25em">GPT_Eval</td>
-        <td class="border" style="padding: 16px 0.25em">Internet; Public dataset</td>
-        <td class="border" style="padding: 16px 0.25em">22.3s</td>
+        <td class="border" style="padding: 16px 0.75em">CVRR-ES</td>
+        <td class="border" style="padding: 16px 0.75em">Default</td>
+        <td class="border" style="padding: 16px 0.75em">cvrr</td>
+        <td class="border" style="padding: 16px 0.75em">Open-ended</td>
+        <td class="border" style="padding: 16px 0.75em">GPT_Eval</td>
+        <td class="border" style="padding: 16px 0.75em">Internet; Public dataset</td>
+        <td class="border" style="padding: 16px 0.75em">22.3s</td>
     </tr>
         <tr class="hover:bg-gray-50">
-        <td class="border" style="padding: 16px 0.25em">Perception Test</td>
-        <td class="border" style="padding: 16px 0.25em">MC</td>
-        <td class="border" style="padding: 16px 0.25em">perceptiontest_val_mc</td>
-        <td class="border" style="padding: 16px 0.25em">MCQ</td>
-        <td class="border" style="padding: 16px 0.25em">Accuracy</td>
-        <td class="border" style="padding: 16px 0.25em">Internet</td>
-        <td class="border" style="padding: 16px 0.25em">23s</td>
+        <td class="border" style="padding: 16px 0.75em">Perception Test</td>
+        <td class="border" style="padding: 16px 0.75em">MC</td>
+        <td class="border" style="padding: 16px 0.75em">perceptiontest_val_mc</td>
+        <td class="border" style="padding: 16px 0.75em">MCQ</td>
+        <td class="border" style="padding: 16px 0.75em">Accuracy</td>
+        <td class="border" style="padding: 16px 0.75em">Internet</td>
+        <td class="border" style="padding: 16px 0.75em">23s</td>
     </tr>
     <tr class="hover:bg-gray-50">
-        <td class="border" style="padding: 16px 0.25em">TempCompass</td>
-        <td class="border" style="padding: 16px 0.25em">Default</td>
-        <td class="border" style="padding: 16px 0.25em">tempcompass</td>
-        <td class="border" style="padding: 16px 0.25em">MCQ; Y/N; Captioning; Caption Matching</td>
-        <td class="border" style="padding: 16px 0.25em">Accuracy</td>
-        <td class="border" style="padding: 16px 0.25em">Internet</td>
-        <td class="border" style="padding: 16px 0.25em">11.9s</td>
+        <td class="border" style="padding: 16px 0.75em">TempCompass</td>
+        <td class="border" style="padding: 16px 0.75em">Default</td>
+        <td class="border" style="padding: 16px 0.75em">tempcompass</td>
+        <td class="border" style="padding: 16px 0.75em">MCQ; Y/N; Captioning; Caption Matching</td>
+        <td class="border" style="padding: 16px 0.75em">Accuracy</td>
+        <td class="border" style="padding: 16px 0.75em">Internet</td>
+        <td class="border" style="padding: 16px 0.75em">11.9s</td>
     </tr>
     <tr class="hover:bg-gray-50">
-        <td class="border" style="padding: 16px 0.25em">Video-MME</td>
-        <td class="border" style="padding: 16px 0.25em">Test</td>
-        <td class="border" style="padding: 16px 0.25em">videomme</td>
-        <td class="border" style="padding: 16px 0.25em">MCQ</td>
-        <td class="border" style="padding: 16px 0.25em">Accuracy</td>
-        <td class="border" style="padding: 16px 0.25em">YouTube</td>
-        <td class="border" style="padding: 16px 0.25em">1017s</td>
+        <td class="border" style="padding: 16px 0.75em">Video-MME</td>
+        <td class="border" style="padding: 16px 0.75em">Test</td>
+        <td class="border" style="padding: 16px 0.75em">videomme</td>
+        <td class="border" style="padding: 16px 0.75em">MCQ</td>
+        <td class="border" style="padding: 16px 0.75em">Accuracy</td>
+        <td class="border" style="padding: 16px 0.75em">YouTube</td>
+        <td class="border" style="padding: 16px 0.75em">1017s</td>
     </tr>
     <!-- A,B,C,D QA	Accuracy	YouTube	1017.0s -->
 </table>
