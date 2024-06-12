@@ -292,33 +292,33 @@ Here’s a breakdown of adding video datasets support, especially on how we impl
     - The code specifically demonstrates the logic of how we handle video datasets in lmms-eval.
 
         ```python
-            @retry(stop=(stop_after_attempt(5) | stop_after_delay(60)), wait=wait_fixed(2))
-            def download(self, dataset_kwargs=None) -> None:
-                # If the dataset is a video dataset,
-                # Recursively search whether their is a zip and unzip it to the huggingface home
-                if dataset_kwargs is not None and "video" in dataset_kwargs and dataset_kwargs["video"]:
-                    hf_home = os.getenv("HF_HOME", "~/.cache/huggingface/")
-                    cache_dir = dataset_kwargs["cache_dir"]
-                    cache_dir = os.path.join(hf_home, cache_dir)
-                    accelerator = Accelerator()
-                    if accelerator.is_main_process:
-                        cache_path = snapshot_download(repo_id=self.DATASET_PATH, repo_type="dataset")
-                        zip_files = glob(os.path.join(cache_path, "**/*.zip"), recursive=True)
+        @retry(stop=(stop_after_attempt(5) | stop_after_delay(60)), wait=wait_fixed(2))
+        def download(self, dataset_kwargs=None) -> None:
+            # If the dataset is a video dataset,
+            # Recursively search whether their is a zip and unzip it to the huggingface home
+            if dataset_kwargs is not None and "video" in dataset_kwargs and dataset_kwargs["video"]:
+                hf_home = os.getenv("HF_HOME", "~/.cache/huggingface/")
+                cache_dir = dataset_kwargs["cache_dir"]
+                cache_dir = os.path.join(hf_home, cache_dir)
+                accelerator = Accelerator()
+                if accelerator.is_main_process:
+                    cache_path = snapshot_download(repo_id=self.DATASET_PATH, repo_type="dataset")
+                    zip_files = glob(os.path.join(cache_path, "**/*.zip"), recursive=True)
 
-                        if not os.path.exists(cache_dir) and len(zip_files) > 0:
-                            for zip_file in zip_files:
-                                eval_logger.info(f"Unzipping {zip_file} to {cache_dir}")
-                                shutil.unpack_archive(zip_file, cache_dir)
+                    if not os.path.exists(cache_dir) and len(zip_files) > 0:
+                        for zip_file in zip_files:
+                            eval_logger.info(f"Unzipping {zip_file} to {cache_dir}")
+                            shutil.unpack_archive(zip_file, cache_dir)
 
-                    accelerator.wait_for_everyone()
+                accelerator.wait_for_everyone()
 
-                    if "builder_script" in dataset_kwargs:
-                        builder_script = dataset_kwargs["builder_script"]
-                        self.DATASET_PATH = os.path.join(cache_path, builder_script)
-                        dataset_kwargs.pop("builder_script")
+                if "builder_script" in dataset_kwargs:
+                    builder_script = dataset_kwargs["builder_script"]
+                    self.DATASET_PATH = os.path.join(cache_path, builder_script)
+                    dataset_kwargs.pop("builder_script")
 
-                    dataset_kwargs.pop("cache_dir")
-                    dataset_kwargs.pop("video")
+                dataset_kwargs.pop("cache_dir")
+                dataset_kwargs.pop("video")
         ```
 
 2.  **Format questions:** For each task, questions are formatted in the `<taskname>/utils.py` file. We parse each document from the Huggingface dataset, retrieve the questions, and formulate the input with any specified model-specific prompts.
