@@ -493,7 +493,7 @@ Here’s a breakdown of adding video datasets support, especially on how we impl
             --output_path ./logs/
         ```
 
-### **Supported Video Tasks**
+### **Newly Supported Video Tasks**
   1. <a href="https://github.com/MILVLG/activitynet-qa">ActivityNet-QA</a>
   2. <a href="https://github.com/egoschema/EgoSchema/">EgoSchema</a>
   3. <a href="http://youcook2.eecs.umich.edu/">YouCook2</a>
@@ -507,7 +507,7 @@ Here’s a breakdown of adding video datasets support, especially on how we impl
   11. <a href="https://github.com/llyx97/TempCompass">TempCompass</a>
   12. <a href="https://github.com/BradyFU/Video-MME">Video-MME</a>
   
-### **Supported Video Models**
+### **Newly Supported Video Models**
 
 We have supported more video models that can be used in LMMs-Eval. We now support evaluating video datasets using a one line command.
 
