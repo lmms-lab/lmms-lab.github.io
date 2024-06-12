@@ -349,5 +349,3 @@ We have supported more video models that can be used in LMMs-Eval. We now suppor
  5. mmmu_group_img_val
 
     We aligned the results of LLaVA-NeXT 34B by combining images into one. That is, in multi-image testing, **all images are stitched together into one**, and tested as a single image. When tested separately (`mmmu_val`), the score was 46.7, and after combination (`mmmu_group_img_val`), the score was 50.1.
-
-    Example: 
