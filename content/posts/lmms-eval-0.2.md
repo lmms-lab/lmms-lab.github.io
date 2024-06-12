@@ -540,4 +540,4 @@ During this period, we received the following Pull Requests (PRs):
 - LLaVA-HF (officially from Huggingface)
 - Idefics-2 (from the lmms-lab team)
 - microsoft/Phi-3-Vision (officially from the authors, Microsoft)
-- LLaVA-SGlang (from the lams-lab team)
+- LLaVA-SGlang (from the lmms-lab team)

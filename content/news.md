@@ -10,7 +10,7 @@ description: Introducing the latest news and updates from the LMMs-Lab.
 
 - **[2024-06]** 🎬🎬 The `lmms-eval/v0.2` has been upgraded to support video evaluations for video models like LLaVA-NeXT Video and Gemini 1.5 Pro across tasks such as EgoSchema, PerceptionTest, VideoMME, and more.
     
-    [GitHub](https://github.com/EvolvingLMMs-Lab/lmms-eval) | [Blog]()
+    [GitHub](https://github.com/EvolvingLMMs-Lab/lmms-eval) | [Blog](https://lmms-lab.github.io/posts/lmms-eval-0.2/)
 
 - **[2024-05]** 🚀🚀 We release the `LLaVA-NeXT Video`, a video model with state-of-the-art performance and reaching to Google's Gemini level performance on diverse video understanding tasks. 
     
