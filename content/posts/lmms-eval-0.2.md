@@ -421,7 +421,7 @@ Here’s a breakdown of adding video datasets support, especially on how we impl
    
  5. mmmu_group_img_val
 
-    We aligned the results of LLaVA-NeXT 34B by combining images into one. That is, in multi-image testing, **all images are stitched together into one**, and tested as a single image. When tested separately (`mmmu_val`), the score was 46.7, and after combination (`mmmu_group_img_val`), the score was 50.1.
+    We aligned the results of LLaVA-NeXT 34B with previously reported values. In our previous evaluation, for the questions with multiple images, we concatenated them into one. When tested separately (`mmmu_val`), the score was 46.7, and after we do the concatenation operation (in lmms-eval, you could switch to use `tasks=mmmu_group_img_val`), the score was 50.1 for LLaVA-NeXT 34B.
 
     <p align="center">
     <a href="https://postimg.cc/2brN0TMk">
