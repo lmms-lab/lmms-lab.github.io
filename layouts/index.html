@@ -136,11 +136,11 @@
                         </h2>
                         <p class="pb-12 mt-6 text-lg text-gray-900 dark:text-white">
                             We explore LLaVA-NeXT's capabilities in video understanding tasks, highlighting its strong performance. Key improvements include:
-                            <br>
+                            <br><br>
                             <strong>SoTA Performance!</strong> Without seeing any video data, LLaVA-Next demonstrates strong zero-shot modality transfer ability, outperforming all the existing open-source LMMs (e.g., LLaMA-VID) that have been specifically trained for videos. Compared with proprietary ones, it achieves comparable performance with Gemini Pro on NextQA and ActivityNet-QA.
-                            <br>
+                            <br><br>
                             <strong>Strong length generalization ability.</strong> Despite being trained under the sequence length constraint of a 4096-token limit, LLaVA-Next demonstrates remarkable ability to generalize to longer sequences. This capability ensures robust performance even when processing long-frame content that exceeds the original token length limitation.
-                            <br>
+                            <br><br>
                             <strong>DPO pushes performance.</strong> DPO with AI feedback on videos yields significant performance gains.
                         </p>
                         </p>
@@ -148,8 +148,8 @@
                 </div>
             </div>
         </div>
-        <div class="sm:mx-auto sm:max-w-3xl sm:px-6">
-            <div class="md:py-12 sm:relative sm:mt-12 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
+        <div class="sm:mx-auto sm:max-w-x sm:px-6">
+            <div class="md:py-12 sm:relative sm:mt-12 lg:absolute lg:inset-y-0 lg:right-12 lg:w-1/2">
                 <div class="hidden sm:block">
                     <div class="absolute inset-y-0 w-screen left-1/2 rounded-l-3xl bg-gray-50 dark:bg-gray-900/10 lg:left-80 lg:right-0 lg:w-full"></div><svg class="absolute -mr-3 top-8 right-1/2 lg:left-0 lg:m-0" width="404" height="392" fill="none" viewBox="0 0 404 392" loading="lazy">
                         <defs>
@@ -167,7 +167,6 @@
                     <img imgh src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="p2" class="w-full rounded-lg shadow-xl lg:h-full lg:w-auto lg:max-w-none" loading="lazy" />
                     {{ end }}
                     {{ end }}
-
                 </div>
             </div>
         </div>

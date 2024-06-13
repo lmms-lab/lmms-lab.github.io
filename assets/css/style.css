@@ -1316,6 +1316,10 @@ video {
   width: 100vw;
 }
 
+.w-1\/2 {
+  width: 50%;
+}
+
 .max-w-4xl {
   max-width: 56rem;
 }
@@ -1346,6 +1350,10 @@ video {
 
 .max-w-xl {
   max-width: 36rem;
+}
+
+.max-w-none {
+  max-width: none;
 }
 
 .flex-1 {
@@ -2013,7 +2021,7 @@ EmojiSymbols;
 
 /* Custom CSS end */
 
-/* .dark\:prose-invert:is(.dark *) {
+.dark\:prose-invert:is(.dark *) {
   --tw-prose-body: var(--tw-prose-invert-body);
   --tw-prose-headings: var(--tw-prose-invert-headings);
   --tw-prose-lead: var(--tw-prose-invert-lead);
@@ -2032,7 +2040,7 @@ EmojiSymbols;
   --tw-prose-pre-bg: var(--tw-prose-invert-pre-bg);
   --tw-prose-th-borders: var(--tw-prose-invert-th-borders);
   --tw-prose-td-borders: var(--tw-prose-invert-td-borders);
-} */
+}
 
 .hover\:bg-gray-50:hover {
   --tw-bg-opacity: 1;
@@ -2146,7 +2154,7 @@ EmojiSymbols;
   opacity: 0.7;
 }
 
-/* .dark\:border-gray-600:is(.dark *) {
+.dark\:border-gray-600:is(.dark *) {
   --tw-border-opacity: 1;
   border-color: rgb(75 85 99 / var(--tw-border-opacity));
 }
@@ -2261,7 +2269,7 @@ EmojiSymbols;
 .dark\:focus\:ring-primary-900:focus:is(.dark *) {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(10 12 106 / var(--tw-ring-opacity));
-} */
+}
 
 @media (min-width: 640px) {
   .sm\:relative {
@@ -2465,6 +2473,11 @@ EmojiSymbols;
     bottom: 0px;
   }
 
+  .lg\:inset-y-1 {
+    top: 0.25rem;
+    bottom: 0.25rem;
+  }
+
   .lg\:-right-8 {
     right: -2rem;
   }
@@ -2491,6 +2504,18 @@ EmojiSymbols;
 
   .lg\:top-12 {
     top: 3rem;
+  }
+
+  .lg\:right-1 {
+    right: 0.25rem;
+  }
+
+  .lg\:right-8 {
+    right: 2rem;
+  }
+
+  .lg\:right-12 {
+    right: 3rem;
   }
 
   .lg\:m-0 {
@@ -2523,6 +2548,18 @@ EmojiSymbols;
     height: 100%;
   }
 
+  .lg\:h-auto {
+    height: auto;
+  }
+
+  .lg\:h-1\/2 {
+    height: 50%;
+  }
+
+  .lg\:h-2\/3 {
+    height: 66.666667%;
+  }
+
   .lg\:w-1\/2 {
     width: 50%;
   }
@@ -2539,12 +2576,24 @@ EmojiSymbols;
     width: 100vw;
   }
 
+  .lg\:w-1\/3 {
+    width: 33.333333%;
+  }
+
   .lg\:max-w-7xl {
     max-width: 80rem;
   }
 
   .lg\:max-w-none {
     max-width: none;
+  }
+
+  .lg\:max-w-full {
+    max-width: 100%;
+  }
+
+  .lg\:max-w-3xl {
+    max-width: 48rem;
   }
 
   .lg\:grid-cols-12 {
