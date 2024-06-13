@@ -20,6 +20,7 @@ tags: video models
     <a href="https://zhangyuanhan-ai.github.io/">Yuanhan Zhang<sup>*</sup></a> &nbsp;
     <br>
     <a href="https://brianboli.com/">Bo Li<sup>*;&dagger;</sup></a>, &nbsp;
+    <a href="https://veiled-texture-20c.notion.site/Peiyuan-Zhang-ab24b48621c9491db767a76df860873a">Peiyuan Zhang</a>, &nbsp;
     <a href="https://liuziwei7.github.io/">Ziwei Liu</a>
   </span>
 </p>
