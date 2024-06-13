@@ -530,7 +530,7 @@ During this period, we received the following Pull Requests (PRs):
 
 **Datasets:**
 
-- VCR: Vision_Caption_Restoration (officially from the authors, MILA)
+- VCR: Vision Caption Restoration (officially from the authors, MILA)
 - ConBench (officially from the authors, PKU/Bytedance)
 - MathVerse (officially from the authors, CUHK)
 - MM-UPD (officially from the authors, University of Tokyo)
