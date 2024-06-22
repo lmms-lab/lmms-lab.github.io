@@ -68,6 +68,9 @@ params:
   p3:
     heading: "LLaVA-NeXT-Video"
     image: "images/pages/multi_frame.png"
+  p4:
+    heading: "LongVA"
+    image: "images/pages/longva.png"
 
   social_media:
     github:

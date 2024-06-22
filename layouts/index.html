@@ -15,10 +15,7 @@
                     </p>
                 </div>
                 <div class="col-span-6">
-                    {{ $hero := resources.GetMatch "images/global/mix_modality.webp" }}
-
-                    {{ $thumb := ($hero.Fill "1200x1200 webp q90") }}
-                    {{ $large := ($hero.Fill "1200x1200 webp q90") }}
+                    {{ $hero := resources.GetMatch "images/global/mix_modality.webp" }} {{ $thumb := ($hero.Fill "1200x1200 webp q90") }} {{ $large := ($hero.Fill "1200x1200 webp q90") }}
 
                     <img srcset="
                         {{- with $thumb.RelPermalink -}}{{.}} 400w{{- end -}}
@@ -46,12 +43,8 @@
                 </div>
                 <div class="relative w-full h-auto px-4 py-6 mx-auto sm:max-w-3xl sm:px-6 lg:px-0 lg:py-20">
                     <div class="overflow-hidden shadow-xl rounded-2xl">
-                        {{ $p1image := resources.Get .Site.Params.P1.Image }}
-                        {{ with $p1image }}
-                        {{ with .Resize (printf "%dx%d webp q90" .Width .Height) }}
-                        <img imgh src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" class="w-full h-auto" alt="P1" loading="lazy" />
-                        {{ end }}
-                        {{ end }}
+                        {{ $p1image := resources.Get .Site.Params.P1.Image }} {{ with $p1image }} {{ with .Resize (printf "%dx%d webp q90" .Width .Height) }}
+                        <img imgh src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" class="w-full h-auto" alt="P1" loading="lazy" /> {{ end }} {{ end }}
                     </div>
                 </div>
             </div>
@@ -63,10 +56,11 @@
                     <div class="mt-6 text-gray-900 dark:text-white">
                         <div class="mt-6 space-y-6 text-gray-900 dark:text-white">
                             <p class="text-lg text-gray-900 dark:text-white">
-                                We're on an exciting journey toward creating Artificial General Intelligence (AGI), much like the enthusiasm of the 1960s moon landing. This journey is powered by advanced large language models (LLMs) and large multimodal models (LMMs), which are complex systems capable of understanding, learning, and performing a wide variety of human tasks.
+                                We're on an exciting journey toward creating Artificial General Intelligence (AGI), much like the enthusiasm of the 1960s moon landing. This journey is powered by advanced large language models (LLMs) and large multimodal models (LMMs), which are complex
+                                systems capable of understanding, learning, and performing a wide variety of human tasks.
                                 <br>
-                                <br>
-                                To gauge how advanced these models are, we use a variety of evaluation benchmarks. These benchmarks are tools that help us understand the capabilities of these models, showing us how close we are to achieving AGI. To address this challenge, we introduce lmms-eval, an evaluation framework meticulously crafted for consistent and efficient evaluation of LMM.
+                                <br> To gauge how advanced these models are, we use a variety of evaluation benchmarks. These benchmarks are tools that help us understand the capabilities of these models, showing us how close we are to achieving AGI.
+                                To address this challenge, we introduce lmms-eval, an evaluation framework meticulously crafted for consistent and efficient evaluation of LMM.
                             </p>
                         </div>
                     </div>
@@ -76,8 +70,8 @@
     </div>
 
     <!-- JITsection -->
-    <div class="overflow-hidden sm:pt-6 lg:relative">
-        <div class="max-w-md px-4 mx-auto sm:max-w-3xl sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-2 lg:gap-12 lg:px-8">
+    <div class="overflow-hidden sm:pt-1 lg:relative" style="display: flex; justify-content: center; align-items: center;">
+        <div class="max-w-md px-1 mx-auto sm:max-w-3xl sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-1 lg:gap-1 lg:px-16">
             <div>
                 <div class="md:mt-8">
                     <div class="mt-6 sm:max-w-xl">
@@ -86,14 +80,12 @@
                         </h2>
                         <p class="pb-12 mt-6 text-lg text-gray-900 dark:text-white">
                             We expanded the LLaVA-NeXT series with recent stronger open LLMs, reporting our findings on more capable language models:
+                            <br> We maintain an efficient training strategy like previous LLaVA models. We supervised finetuned our model on the same data as in previous LLaVA-NeXT 7B/13B/34B models. Our current largest model LLaVA-NeXT-110B is trained
+                            on 128 H800-80G for 18 hours.
                             <br>
-                            We maintain an efficient training strategy like previous LLaVA models. We supervised finetuned our model on the same data as in previous LLaVA-NeXT 7B/13B/34B models. Our current largest model LLaVA-NeXT-110B is trained on 128 H800-80G for 18 hours.
+                            <br> With stronger LLMs support, LLaVA-NeXT achieves consistently better performance compared with prior open-source LMMs by simply increasing the LLM capability. It catches up to GPT4-V on selected benchmarks.
                             <br>
-                            <br>
-                            With stronger LLMs support, LLaVA-NeXT achieves consistently better performance compared with prior open-source LMMs by simply increasing the LLM capability. It catches up to GPT4-V on selected benchmarks.
-                            <br>
-                            <br>
-                            We report detailed ablations, including architectural modifications, enlarged visual tokens, and varied training strategies, to explore potential improvements in LLaVA-NeXT's performance.
+                            <br> We report detailed ablations, including architectural modifications, enlarged visual tokens, and varied training strategies, to explore potential improvements in LLaVA-NeXT's performance.
                         </p>
                         </p>
                     </div>
@@ -101,45 +93,42 @@
             </div>
         </div>
         <div class="sm:mx-auto sm:max-w-3xl sm:px-6">
-            <div class="md:py-12 sm:relative sm:mt-12 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
+            <div class="md:py-2 sm:relative sm:mt-12 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
                 <div class="hidden sm:block">
                     <div class="absolute inset-y-0 w-screen left-1/2 rounded-l-3xl bg-gray-50 dark:bg-gray-900/10 lg:left-80 lg:right-0 lg:w-full"></div><svg class="absolute -mr-3 top-8 right-1/2 lg:left-0 lg:m-0" width="404" height="392" fill="none" viewBox="0 0 404 392" loading="lazy">
                         <defs>
-                            <pattern id="837c3e70-6c3a-44e6-8854-cc48c737b659" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+                            <pattern id="837c3e70-6c3a-44e6-8854-cc48c737b659" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
                                 <rect x="0" y="0" width="4" height="4" class="text-gray-200 dark:text-gray-900/60" fill="currentcolor"></rect>
                             </pattern>
                         </defs>
                         <rect width="404" height="392" fill="url(#837c3e70-6c3a-44e6-8854-cc48c737b659)"></rect>
                     </svg>
                 </div>
-                <div class="relative pl-4 -mr-40 sm:mx-auto sm:max-w-3xl sm:px-0 lg:h-full lg:max-w-none lg:pl-12">
-                    {{ $p2image := resources.Get .Site.Params.P2.Image }}
-                    {{ with $p2image }}
-                    {{ with .Resize (printf "%dx%d webp q90" .Width .Height) }}
-                    <img imgh src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="p2" class="w-full rounded-lg shadow-xl lg:h-full lg:w-auto lg:max-w-none" loading="lazy" />
-                    {{ end }}
-                    {{ end }}
-
+                <div class="relative pl-9 -mr-90 sm:mx-auto sm:max-w-3xl sm:px-2 lg:h-full lg:max-w-none lg:pl-14">
+                    {{ $p2image := resources.Get .Site.Params.P2.Image }} {{ with $p2image }} {{ with .Resize (printf "%dx%d webp q90" .Width .Height) }}
+                    <img imgh src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="p2" class="w-200 rounded-lg shadow-xl lg:h-full lg:w-auto lg:max-w-none" loading="lazy" /> {{ end }} {{ end }}
                 </div>
             </div>
         </div>
     </div>
 
 
-    <div class="overflow-hidden sm:pt-6 lg:relative">
-        <div class="max-w-md px-4 mx-auto sm:max-w-3xl sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-2 lg:gap-12 lg:px-8">
+    <div class="overflow-hidden sm:pt-1 lg:relative" style="display: flex; justify-content: center; align-items: center;">
+        <div class="max-w-md px-1 mx-auto sm:max-w-3xl sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-1 lg:gap-1 lg:px-16">
             <div>
                 <div class="md:mt-8">
-                    <div class="mt-6 sm:max-w-xl">
+                    <div class="mt-6 sm:max-w-2xl">
                         <h2 class="text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white sm:text-4xl md:mt-16">
                             <a href="https://llava-vl.github.io/blog/" style="color: 	#ff0000">LLaVA-NeXT Video</a>
                         </h2>
                         <p class="pb-12 mt-6 text-lg text-gray-900 dark:text-white">
                             We explore LLaVA-NeXT's capabilities in video understanding tasks, highlighting its strong performance. Key improvements include:
                             <br><br>
-                            <strong>SoTA Performance!</strong> Without seeing any video data, LLaVA-Next demonstrates strong zero-shot modality transfer ability, outperforming all the existing open-source LMMs (e.g., LLaMA-VID) that have been specifically trained for videos. Compared with proprietary ones, it achieves comparable performance with Gemini Pro on NextQA and ActivityNet-QA.
+                            <strong>SoTA Performance!</strong> Without seeing any video data, LLaVA-Next demonstrates strong zero-shot modality transfer ability, outperforming all the existing open-source LMMs (e.g., LLaMA-VID) that have been specifically
+                            trained for videos. Compared with proprietary ones, it achieves comparable performance with Gemini Pro on NextQA and ActivityNet-QA.
                             <br><br>
-                            <strong>Strong length generalization ability.</strong> Despite being trained under the sequence length constraint of a 4096-token limit, LLaVA-Next demonstrates remarkable ability to generalize to longer sequences. This capability ensures robust performance even when processing long-frame content that exceeds the original token length limitation.
+                            <strong>Strong length generalization ability.</strong> Despite being trained under the sequence length constraint of a 4096-token limit, LLaVA-Next demonstrates remarkable ability to generalize to longer sequences. This capability
+                            ensures robust performance even when processing long-frame content that exceeds the original token length limitation.
                             <br><br>
                             <strong>DPO pushes performance.</strong> DPO with AI feedback on videos yields significant performance gains.
                         </p>
@@ -149,7 +138,54 @@
             </div>
         </div>
         <div class="sm:mx-auto sm:max-w-x sm:px-6">
-            <div class="md:py-12 sm:relative sm:mt-12 lg:absolute lg:inset-y-0 lg:right-12 lg:w-1/2">
+            <div class="md:py-12 sm:relative sm:mt-12 lg:absolute lg:inset-y-2 lg:right-12 lg:w-1/2">
+                <div class="hidden sm:block">
+                    <div class="absolute inset-y-0 w-screen left-1/2 rounded-l-3xl bg-gray-50 dark:bg-gray-900/10 lg:left-80 lg:right-2 lg:w-full"></div><svg class="absolute -mr-3 top-8 right-1/2 lg:left-0 lg:m-0" width="404" height="392" fill="none" viewBox="0 0 404 392" loading="lazy">
+                        <defs>
+                            <pattern id="837c3e70-6c3a-44e6-8854-cc48c737b659" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+                                <rect x="0" y="0" width="4" height="4" class="text-gray-200 dark:text-gray-900/60" fill="currentcolor"></rect>
+                            </pattern>
+                        </defs>
+                        <rect width="404" height="392" fill="url(#837c3e70-6c3a-44e6-8854-cc48c737b659)"></rect>
+                    </svg>
+                </div>
+                <div class="relative pl-4 -mr-40 sm:mx-auto sm:max-w-3xl sm:px-0 lg:h-full lg:max-w-none lg:pl-12">
+                    {{ $p3image := resources.Get .Site.Params.P3.Image }} {{ with $p3image }} {{ with .Resize (printf "%dx%d webp q90" .Width .Height) }}
+                    <img imgh src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="p2" class="w-full rounded-lg shadow-xl lg:h-full lg:w-auto lg:max-w-none" loading="lazy" /> {{ end }} {{ end }}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="overflow-hidden sm:pt-1 lg:relative" style="display: flex; justify-content: center; align-items: center;">
+        <div class="max-w-md px-2 mx-auto sm:max-w-4xl sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-1 lg:gap-4 lg:px-2">
+            <div>
+                <div class="md:mt-8">
+                    <div class="mt-6 sm:max-w-xl">
+                        <h2 class="text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white sm:text-4xl md:mt-16">
+                            <a href="https://github.com/EvolvingLMMs-Lab/LongVA" style="color: 	#ff0000">LongVA</a>
+                        </h2>
+                        <p class="pb-12 mt-6 text-lg text-gray-900 dark:text-white">
+                            Gemini has amazed the world with its capability to understand hour-long videos. However, we still lack an open-source alternative with similar capabilities. Our latest research presents an innovative solution towards long video LMM, shifting the focus
+                            from reducing visual tokens per frame to leveraging the long context capabilities of language models. Here, we present our SoTA video model, Long Video Assistant (LongVA), and our novel benchmark, Visual Needle-In-A-Haystack
+                            (V-NIAH).
+                            <br><br>
+                            <strong>Long Context Transfer</strong> We discovered and verified that the long context capability of language models can be directly transferred to the video domain in modality-aligned multi-modal models. On V-NIAH, LongVA
+                            is the only open-source model capable of accurately retrieving visual information from inputs with 2000 frames or more than 200K visual tokens.
+                            <br><br>
+                            <strong>UniRes</strong> We proposed UniRes, a unified visual encoding scheme that encodes both images and videos. In UniRes, a video is encoded the same as multiple image crops in a sequence. Leveraging the Long Context Transfer
+                            property and UniRes, LongVA exhibits superior zero-shot performance in video tasks without any video-specific training data.
+                            <br><br>
+                            <strong>SoTA Performance</strong> LongVA achieves state-of-the-art performance on the comprehensive Video-MME benchmarks among 7B models. Its performance increases with denser sampling of video frames. We also conduct careful
+                            experiments to ablate where it improvements come from.
+                        </p>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sm:mx-auto sm:max-w-x sm:px-2">
+            <div class="md:py-12 sm:relative sm:mt-12 lg:absolute lg:inset-y-0 lg:right-24 lg:w-1/2">
                 <div class="hidden sm:block">
                     <div class="absolute inset-y-0 w-screen left-1/2 rounded-l-3xl bg-gray-50 dark:bg-gray-900/10 lg:left-80 lg:right-0 lg:w-full"></div><svg class="absolute -mr-3 top-8 right-1/2 lg:left-0 lg:m-0" width="404" height="392" fill="none" viewBox="0 0 404 392" loading="lazy">
                         <defs>
@@ -160,13 +196,9 @@
                         <rect width="404" height="392" fill="url(#837c3e70-6c3a-44e6-8854-cc48c737b659)"></rect>
                     </svg>
                 </div>
-                <div class="relative pl-4 -mr-40 sm:mx-auto sm:max-w-3xl sm:px-0 lg:h-full lg:max-w-none lg:pl-12">
-                    {{ $p3image := resources.Get .Site.Params.P3.Image }}
-                    {{ with $p3image }}
-                    {{ with .Resize (printf "%dx%d webp q90" .Width .Height) }}
-                    <img imgh src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="p2" class="w-full rounded-lg shadow-xl lg:h-full lg:w-auto lg:max-w-none" loading="lazy" />
-                    {{ end }}
-                    {{ end }}
+                <div class="relative pl-2 -mr-40 sm:mx-auto sm:max-w-3xl sm:px-0 lg:h-auto lg:max-w-none lg:pl-2">
+                    {{ $p4image := resources.Get .Site.Params.P4.Image }} {{ with $p4image }} {{ with .Resize (printf "%dx%d webp q90" .Width .Height) }}
+                    <img imgh src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="p2" class="w-full rounded-lg shadow-xl lg:h-full lg:w-auto lg:max-w-none" loading="lazy" /> {{ end }} {{ end }}
                 </div>
             </div>
         </div>
