@@ -16,19 +16,19 @@ We are always looking for new members to join us, so if you are interested, plea
 
 ## Student Team
 
-- [Bo Li](https://brianboli.com/), PhD Student, NTU, Singapore
-- [Yuanhan Zhang](https://zhangyuanhan-ai.github.io/), PhD Student, NTU, Singapore
-- [Peiyuan Zhang](https://veiled-texture-20c.notion.site/Peiyuan-Zhang-ab24b48621c9491db767a76df860873a), Research Assistant, NTU -> PhD Student, UCSD
-- [Kaichen Zhang](https://www.linkedin.com/in/kaichen-zhang-014b17219/?originalSubdomain=sg), Undergraduate Student, NTU, Singapore
-- [Fanyi Pu](https://pufanyi.github.io/), Undergraduate Student, NTU, Singapore
-- [Kairui Hu](https://kairuihu.github.io/), Undergraduate Student, NTU, Singapore
-- [Jingkang Yang](https://jingkang50.github.io/), PhD Student, NTU, Singapore
-- [Shuai Liu](https://github.com/choiszt), MS Student, NTU, Singapore
+- [Bo Li](https://brianboli.com/)
+- [Yuanhan Zhang](https://zhangyuanhan-ai.github.io/)
+- [Peiyuan Zhang](https://veiled-texture-20c.notion.site/Peiyuan-Zhang-ab24b48621c9491db767a76df860873a)
+- [Kaichen Zhang](https://www.linkedin.com/in/kaichen-zhang-014b17219/?originalSubdomain=sg)
+- [Fanyi Pu](https://pufanyi.github.io/)
+- [Kairui Hu](https://kairuihu.github.io/)
+- [Shuai Liu](https://github.com/choiszt)
+- [Jingkang Yang](https://jingkang50.github.io/)
 
 ## Faculty Team
 
-- [Chunyuan Li](https://chunyuan.li/), ByteDance
-- [Ziwei Liu](https://liuziwei7.github.io/), Assistant Professor, NTU, Singapore
+- [Chunyuan Li](https://chunyuan.li/)
+- [Ziwei Liu](https://liuziwei7.github.io/)
 
 # Contacts
 

@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang=en>
+
+<head>
+    <meta http-equiv=Content-Type content="text/html" charset=UTF-8>
+    <meta http-equiv=X-UA-Compatible content="IE=edge,chrome=1">
+    <meta name=viewport content="width=device-width,initial-scale=1">
+    <link rel=apple-touch-icon sizes=180x180 href=/favicon/fav.png>
+    <link rel=icon type=image/png sizes=32x32 href=/favicon/fav.png>
+    <link rel=icon type=image/png sizes=16x16 href=/favicon/fav.png>
+    <link rel=manifest href=/favicon/site.webmanifest>
+    <link rel=mask-icon href=/favicon/safari-pinned-tab.svg color=#5bbad5>
+    <meta name=msapplication-TileColor content="#da532c">
+    <meta name=theme-color content="#ffffff">
+    <title itemprop=name>Long Context Transfer from Language to Vision | LMMs-Lab
+    </title>
+    <meta name=description content="Our paper explores the long context transfer phenomenon and validates this property on both image and video benchmarks. We propose the Long Video Assistant (LongVA) model, which can process up to 2000 frames or over 2000K visual tokens without additional complexities.">
+    <meta property="og:title" content="Long Context Transfer from Language to Vision | LMMs-Lab">
+    <meta name=twitter:title content="Long Context Transfer from Language to Vision | LMMs-Lab">
+    <meta itemprop=name content="Long Context Transfer from Language to Vision | LMMs-Lab">
+    <meta name=application-name content="Long Context Transfer from Language to Vision | LMMs-Lab">
+    <meta property="og:description" content="Our paper explores the long context transfer phenomenon and validates this property on both image and video benchmarks. We propose the Long Video Assistant (LongVA) model, which can process up to 2000 frames or over 2000K visual tokens without additional complexities.">
+    <meta property="og:site_name" content="LMMs-Lab">
+    <meta property="og:url" content="/posts/longva/">
+    <meta property="og:locale" content="en">
+    <meta property="og:image" content="/../assets/images/pages/longva.png">
+    <meta property="og:image:secure_url" content="/assets/images/pages/longva.png">
+    <meta property="og:type" content="article">
+    <script>
+        localStorage.getItem("color-theme") === "dark" || !("color-theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches ? document.documentElement.classList.add("dark") : document.documentElement.classList.remove("dark")
+    </script>
+    <link rel=stylesheet href="/css/style.min.2fb146dd445202ce14bf939c55b8d40dc64c9350acc35932eb42a32a0e56d289.css" integrity="sha256-L7FG3URSAs4Uv5OcVbjUDcZMk1Csw1ky60KjKg5W0ok=">
+</head>
+
+<body class="bg-zinc-100 dark:bg-gray-800">
+    <div class="top-0 z-50 w-full text-gray-200 bg-gray-900 border-2 border-gray-900 md:sticky border-b-stone-200/10">
+        <div x-data="{ open: false }" class="flex flex-col max-w-full px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
+            <div class="flex flex-row items-center justify-between p-4">
+                <a href=/ class="flex text-gray-100 transition duration-1000 ease-in-out group"><img src=/images/fav.png class="transition-opacity h-9 w-9 group-hover:opacity-50 group-focus:opacity-70" alt="LMMs-Lab Logo">
+                    <div class="mt-1 ml-3 text-xl font-black tracking-tight text-gray-100 uppercase transition-colors group-hover:text-gray-400/60">
+                        LMMs-Lab</div>
+                </a><button class="rounded-lg md:hidden focus:outline-none focus:shadow-outline" @click="open = !open" role=navigation aria-expanded=false aria-label=Main aria-controls=menuItems><svg fill="currentcolor"
+                        viewBox="0 0 20 20" class="w-6 h-6">
+                        <path x-show="!open" fill-rule="evenodd"
+                            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4A1 1 0 013 5zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm6 5a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
+                            clip-rule="evenodd" />
+                        <path x-show="open" fill-rule="evenodd"
+                            d="M4.293 4.293a1 1 0 011.414.0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                            clip-rule="evenodd" />
+                    </svg></button></div>
+            <nav :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row"><a class="px-4 py-2 mt-2 text-sm font-semibold rounded-lg md:mt-0 md:ml-4 hover:text-white focus:text-white hover:bg-primary-600 focus:bg-primary-700 focus:outline-none focus:shadow-outline" href=/team/ title=Team>Team
+                </a><a class="px-4 py-2 mt-2 text-sm font-semibold rounded-lg md:mt-0 md:ml-4 hover:text-white focus:text-white hover:bg-primary-600 focus:bg-primary-700 focus:outline-none focus:shadow-outline" href=/categories/blog/ title=Blogs>Blogs
+                </a><a class="px-4 py-2 mt-2 text-sm font-semibold rounded-lg md:mt-0 md:ml-4 hover:text-white focus:text-white hover:bg-primary-600 focus:bg-primary-700 focus:outline-none focus:shadow-outline" href=/news/ title=News>News</a>
+                <div @click.away="open = false" class=relative x-data="{ open: false }"><button @click="open = !open" class="flex flex-row items-center w-full px-4 py-2 mt-2 text-sm font-semibold text-left bg-transparent rounded-lg dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:focus:bg-gray-600 dark-mode:hover:bg-gray-600 md:w-auto md:inline md:mt-0 md:ml-4 hover:text-white focus:text-white hover:bg-primary-600 focus:bg-primary-600 focus:outline-none focus:shadow-outline">
+                        <span>More</span><svg fill="currentcolor" viewBox="0 0 20 20"
+                            :class="{'rotate-180': open, 'rotate-0': !open}"
+                            class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1">
+                            <path fill-rule="evenodd"
+                                d="M5.293 7.293a1 1 0 011.414.0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414.0l-4-4a1 1 0 010-1.414z"
+                                clip-rule="evenodd" />
+                        </svg></button>
+                    <div x-show=open x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100"
+                        x-transition:leave-end="transform opacity-0 scale-95" class="absolute right-0 z-30 w-full mt-2 origin-top-right md:max-w-sm md:w-screen">
+                        <div class="px-2 pt-2 pb-4 bg-white rounded-md shadow-lg text-zinc-900">
+                            <div class="grid grid-cols-1 gap-4">
+                                <a class="flex items-start p-2 bg-transparent rounded-lg group row hover:text-white focus:text-white hover:bg-primary-600 focus:bg-primary-700 focus:outline-none focus:shadow-outline" href=https://github.com/EvolvingLMMs-Lab>
+                                    <div class="p-3 text-white bg-primary-600 rounded-lg group-hover:bg-gray-900"><svg fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-4 h-4 md:h-6 md:w-6">
+                                            <path
+                                                d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16 2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                                        </svg></div>
+                                    <div class=ml-3>
+                                        <p class=font-semibold>Github</p>
+                                        <p class=text-sm>See what we're grinding on</p>
+                                    </div>
+                                </a>
+                                <a class="flex items-start p-2 bg-transparent rounded-lg group row hover:text-white focus:text-white hover:bg-primary-600 focus:bg-primary-700 focus:outline-none focus:shadow-outline" href=https://huggingface.co/lmms-lab>
+                                    <div class="p-3 text-white bg-primary-600 rounded-lg group-hover:bg-gray-900"><svg fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-4 h-4 md:h-6 md:w-6">
+                                            <path
+                                                d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863.0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                                        </svg></div>
+                                    <div class=ml-3>
+                                        <p class=font-semibold>Huggingface</p>
+                                        <p class=text-sm>See what we're opensourcing</p>
+                                    </div>
+                                </a>
+                                <a class="flex items-start p-2 bg-transparent rounded-lg group row hover:text-white focus:text-white hover:bg-primary-600 focus:bg-primary-700 focus:outline-none focus:shadow-outline" href=https://github.com/LLaVA-VL/LLaVA-NeXT>
+                                    <div class="p-3 text-white bg-primary-600 rounded-lg group-hover:bg-gray-900"><svg fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-4 h-4 md:h-6 md:w-6">
+                                            <path d="M11 3.055A9.001 9.001.0 1020.945 13H11V3.055z" />
+                                            <path d="M20.488 9H15V3.512A9.025 9.025.0 0120.488 9z" />
+                                        </svg></div>
+                                    <div class=ml-3>
+                                        <p class=font-semibold>Related</p>
+                                        <p class=text-sm>Take a look at our related projects</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <article>
+        <header class="mb-4 bg-primary-600"><span class=py-96>
+                <h1 class="py-16 text-5xl font-black text-center text-white capitalize">Long Context Transfer from
+                    Language to Vision</h1>
+            </span></header>
+        <div class="max-w-4xl mx-auto mt-8 mb-2">
+            <div class=px-6><img src=/../assets/images/pages/longva_hu7c300cb4774dd63d493563348dafae6a_379494_1500x0_resize_q80_h2_box_3.webp srcset=", /../assets/images/pages/longva_hu7c300cb4774dd63d493563348dafae6a_379494_400x0_resize_q80_h2_box_3.webp 400w, /../assets/images/pages/longva_hu7c300cb4774dd63d493563348dafae6a_379494_550x0_resize_q80_h2_box_3.webp 550w, /../assets/images/pages/longva_hu7c300cb4774dd63d493563348dafae6a_379494_900x0_resize_q80_h2_box_3.webp 768w, /../assets/images/pages/longva_hu7c300cb4774dd63d493563348dafae6a_379494_1500x0_resize_q80_h2_box_3.webp 1100w"
+                    class="object-fill overflow-hidden rounded-lg shadow-lg ring-4 ring-zinc-300/40 dark:ring-gray-900/40 shadow-neutral-100/20 dark:shadow-neutral-800/40" width=100% alt></div>
+        </div>
+        <div class="max-w-4xl px-6 pt-6 pb-16 mx-auto prose dark:prose-invert dark:text-white">
+            <h1 id=table-of-contents>Table of Contents</h1>
+            <ul style=line-height:1.2>
+                <li><a href=#abstract>Abstract</a></li>
+                <li><a href=#introduction>Introduction</a></li>
+                <li><a href=#long-video-assistant>Long Video Assistant</a>
+                    <ul>
+                        <li><a href=#training-long-language-model>Training Long Language Model</a></li>
+                        <li><a href=#aligning-long-language-model-using-short-vision-data>Aligning Long Language Model
+                                Using Short Vision Data</a></li>
+                    </ul>
+                </li>
+                <li><a href=#experiments>Experiments</a>
+                    <ul>
+                        <li><a href=#v-niah-results>V-NIAH Evaluations</a></li>
+                        <li><a href=#video-evaluations>Video Evaluations</a></li>
+                        <li><a href=#image-evaluations>Image Evaluations</a></li>
+                    </ul>
+                </li>
+                <li><a href=#conclusion>Conclusion</a></li>
+            </ul>
+            <hr>
+            <p style=font-size:16px;line-height:1.4><span style=color:gray;font-size:18px><a
+                        href=https://veiled-texture-20c.notion.site/Peiyuan-Zhang-ab24b48621c9491db767a76df860873a>Peiyuan
+                        Zhang<sup>*;&#8224;1;2</sup></a>, &nbsp;
+                    <a href="https://www.linkedin.com/in/kaichen-zhang-014b17219/?originalSubdomain=sg">Kaichen
+                        Zhang<sup>*;1;2</sup></a>, &nbsp;
+                    <a href=https://brianboli.com />Bo Li<sup>*;1;2</sup></a>, &nbsp;<br><a
+                        href="https://openreview.net/profile?id=~Guangtao_Zeng1">Guangtao Zeng<sup>3</sup></a>, &nbsp;
+                    <a href=https://jingkang50.github.io />Jingkang Yang<sup>1;2</sup></a>, &nbsp;
+                    <a href=https://zhangyuanhan-ai.github.io />Yuanhan Zhang<sup>1;2</sup></a>, &nbsp;<br><a
+                        href="https://openreview.net/profile?id=~Ziyue_Wang5">Ziyue Wang<sup>2</sup></a>, &nbsp;
+                    <a href="https://openreview.net/profile?id=~Haoran_Tan1">Haoran Tan<sup>2</sup></a>, &nbsp;
+                    <a href=https://chunyuan.li />Chunyuan Li<sup>1</sup></a>, &nbsp;
+                    <a href=https://liuziwei7.github.io />Ziwei Liu<sup>1;2</sup></a>, &nbsp;</span></p>
+            <p style=font-size:16px;line-height:1.2><sup>1</sup>LMMs-Lab Team &nbsp; <sup>2</sup>NTU, Singapore &nbsp;
+                <sup>3</sup>SUTD, Singapore<br><br><sup>*</sup>equal contribution.
+                <sup>&#8224;</sup>project lead.
+            </p>
+            <h1 id=abstract>Abstract</h1>
+            <p>Video sequences offer valuable temporal information, but existing large multimodal models (LMMs) fall short in understanding extremely long videos. Many works address this by reducing the number of visual tokens using visual resamplers. Alternatively,
+                in this paper, we approach this problem from the perspective of the language model. By simply extrapolating the context length of the language model with text data alone, we enable LMMs to comprehend up to 200K visual tokens without training
+                on any video data.
+            </p>
+            <p>Our paper makes the following contributions:
+                <strong>a)</strong> We explore the \textit{long context transfer} phenomenon and validate this property on both image and video benchmarks.
+                <strong>b)</strong> To effectively measure the LMM’s ability to generalize to long contexts in the vision modality, we develop V-NIAH (Visual Needle-In-A-Haystack), a purely synthetic long vision benchmark inspired by the language model’s
+                NIAH test.
+                <strong>c)</strong> We propose the Long Video Assistant (LongVA) model, which can process up to 2000 frames or over 2000K visual tokens without additional complexities. With its extended context length, LongVA achieves state-of-the-art
+                performance on Video-MME among 7B-scale models by densely sampling more input frames.
+            </p>
+            <p>We opensource the code and models at:</p>
+            <ul>
+                <li><a href=https://github.com/EvolvingLMMs-Lab/LongVA>Github</a></li>
+                <li><a href=https://longva-demo.lmms-lab.com />Demo</a>
+                </li>
+                <li><a href=https://huggingface.co/lmms-lab>Checkpoints</a>
+                    <ul>
+                        <li><a href=https://huggingface.co/lmms-lab/LongVA-7B>LongVA-7B</a></li>
+                        <li><a href=https://huggingface.co/lmms-lab/LongVA-7B-DPO>LongVA-7B-DPO</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <h1 id=introduction>Introduction</h1>
+            <p>Driven by the progress of Large Language Models (LLMs), multiple studies are conducted to extend their capability to understand images and videos. With modality alignment and visual instruction tuning, these Large Multimodal Models (LMMs)
+                have shown impressive abilities such as captioning and visual question-answering. While current LMMs have demonstrated promising performance on tasks involving single images and short videos, effectively processing and understanding extremely
+                long videos remains a significant challenge.</p>
+            <p>One of the primary reasons for this challenge is the excessive number of visual tokens generated by the vision encoder. For instance, LLaVA-1.6 can produce 576 to 2880 visual tokens for a single image. The number of visual tokens increases
+                significantly with the addition of more frames. To address this problem, numerous methods have been proposed to reduce the number of visual tokens. One popular direction is to modify the visual resampler that connects the vision encoder
+                and LLM, aiming to extract fewer tokens. Alternative approaches employ heuristic techniques to prune or merge the visual features. However, despite these efforts, Table 1 demonstrates that the majority of current LMMs are still limited
+                in their ability to process a large number of frames effectively.</p>
+            <p>Another issue hindering the development of high-performance long video LMMs is the lack of high-quality long video datasets. In Table 1, we list the average video length of existing video instruction tuning data. Most datasets consist of video
+                clips within 1 minute. Even if some datasets do contain longer videos, the corresponding text pairs are generated by annotating only several frames within that video, lacking long and dense supervision signals.</p>
+            <p>This work addresses both of the aforementioned problems. For modeling, instead of reducing the visual tokens, we identify the more critical issue limiting the visual context length in existing LMMs: the context length of the language model
+                backbone. Given a language model, we first extend its context length by training on longer text data. We then use this context-extended LM as the backbone to perform modality alignment and visual instruction tuning without any long video
+                text pairs. By training this way, the context length of the language model is directly transferred to that of the LMMs.</p>
+            <p>To facilitate benchmarking and accurately assess the context length in the visual domain, we created V-NIAH, a synthetic visual benchmark based on the Needle-in-a-haystack test used in language models. Our model, Long Video Assistant (LongVA),
+                is capable of accurately retrieving visual information from 2000 frames or more than 224K visual tokens. Experiments show that additional frames during inference lead to improved performance on long video question-answering benchmarks,
+                and LongVA achieves state-of-the-art performance among 7B models on the Video-MME dataset. In summary, our paper makes the following contributions:</p>
+            <p><strong>(1) Long Context Transfer (LCT)</strong>: We discovered the LCT phenomenon where the context of the language model can be directly transferred to the modality-aligned multi-modal models.</p>
+            <p><strong>(2) Long Video Assistant (LongVA)</strong>: Leveraging the LCT property, we developed LongVA model that can perceive up to 224K visual tokens without any long video data during training.</p>
+            <p><strong>(3) Visual Needle-In-A-Haystack (V-NIAH)</strong>: We proposed V-NIAH benchmark testify LMMs ability in locating and retrieving visual information over extremely long contexts.</p>
+            <p>
+                <a href=https://postimg.cc/RNv9vLYY><img src=https://i.postimg.cc/NfH07NkQ/longva-table1.png alt=longva-table1.png></a>
+            </p>
+            <h1 id=long-video-assistant>Long Video Assistant</h1>
+            <p>As in Figure 1, this paper centers around the hypothesis that <em>if the modality of vision and language
+                    can be truly aligned, the capability to handle long contexts could also transfer from text to
+                    vision</em>, and this could happen even without explicit long video training. Our methodology is thus very straightforward. Given a language model, we first perform long context training purely on language to extend its text context
+                in <a href=#training-long-language-model>Training Long Language
+                    Model</a>. We then detailed how we augment this language model with long visual capabilities by training solely on short image data in <a href=#vl-alignment>Visual-Language Alignment</a>.</p>
+            <p><img src=https://i.postimg.cc/SQZZ7dN1/longva-figure1.png alt="LongVA Plot Main"></p>
+            <h2 id=training-long-language-model>Training Long Language Model</h2>
+            <p>We use Qwen2-7B-Instruct as the backbone language model and perform continued pretraining with a context length of 224K<sup id=fnref:1><a href=#fn:1 class=footnote-ref role=doc-noteref>1</a></sup> over a total of 900M tokens. We follow
+                <a
+                    href=https://arxiv.org/abs/2309.16039>Xiong et al. (2023)</a> to increase RoPE base frequency during the continued pertaining and specifically set it to 1B. A constant learning rate of 1e-5 is maintained for a batch size of one million tokens across 1,000 training steps. Following
+                    <a href=https://arxiv.org/abs/2402.10171>Fu et al. (2024)</a>, we construct the dataset used for long context training from Slimpajama by upsampling documents longer than 4096 and keeping the domain mixture ratio unchanged. Multiple
+                    documents are packed into a single sequence separated by a BOS token.</p>
+            <p>We employed several optimization strategies to perform training on such long sequences. These include FlashAttention-2, Ring Attention, activation checkpointing, and parameter offload. To balance the load across different GPUs, we shard the
+                sequence in a zigzag way in ring attention. The resulting training framework is memory efficient and maintains very high GPU occupancy. Note that we do not use any parameter-efficient methods such as LoRA or approximate attention. With
+                those optimizations, the compute used in long context training is minimal compared to that of language model pretraining, making it feasible for academic budgets. The long context training can finish in 2 days with 8 A100 GPUs.</p>
+            <h2 id=aligning-long-language-model-using-short-vision-data>Aligning Long Language Model Using Short Vision Data
+            </h2>
+            <p>Inspired by the <em>AnyRes</em> encoding scheme in LLaVA-NeXT, we designed <em>UniRes</em> that provides a unified encoding scheme for both images and videos, as shown in Figure 2. Unlike <em>AnyRes</em> which retains a small base image and
+                flattens ViT patches across the grids, <em>UniRes</em> removes the base image and flattens patches within each grid. This approach allows us to maintain consistent representation when extending image data into videos where multiple frames
+                are viewed as multiple grids in a row. To clearly ablate the long context transfer phenomenon from language to vision, we only use image-text data during training (and thus no long video data during training).</p>
+            <p><img src=https://i.postimg.cc/V6z8MgLL/longva-figure2.png alt="LongVA Figure 2"></p>
+            <h1 id=experiments>Experiments</h1>
+            <h2 id=v-niah-evaluations>V-NIAH Evaluations</h2>
+            <p>To measure the context length of language models on extremely long input, earlier works calculate perplexity scores over long documents. Recently, many have started using the Needle-in-a-Haystack (NIAH) test to benchmark LLMs&rsquo; ability
+                to retrieve long context information precisely. We note that there is so far no benchmark to measure the visual context length of LMMs. To evaluate LongVA&rsquo;s capacity to locate and retrieve long-range visual information, we extend
+                the NIAH test from text to video and propose V-NIAH.</p>
+            <p>As shown in Figure 3, we designed 5 video question-answering problems as the needle and inserted each as a single frame into hours-long videos. We sampled the videos at 1 FPS as the visual input. The image of the needle is sourced from existing
+                VQA benchmarks or AI-generated to avoid any contamination. The AI-generated images and questions are purposely chosen to be &ldquo;counterfactual&rdquo; or &ldquo;counter-commonsense&rdquo;, ensuring the model cannot answer based on language
+                knowledge alone. Each question includes a &ldquo;locating prompt&rdquo; so that a capable system or human can locate the needle frame from the video haystack and answer the question.</p>
+            <p>When testing LongVA with visual inputs of up to 3000 frames, one difficulty we encountered was that processing a 200K-token input requires up to 100GB of GPU memory for the KV cache for a 7B LM like LLaMA. Even with advanced LM serving systems
+                like vLLM with tensor parallelism to shard the KV cache across multiple GPUs, the sampling process remains extremely slow due to limited memory and batchsize. To address this, we used &ldquo;perplexity-based&rdquo; evaluation to measure
+                the correctness of the model output. We first encode all frames and save their corresponding visual embeddings. During the evaluation, we only load the language model from LongVA and concatenate the visual embeddings, question tokens,
+                and answer tokens for a single forward pass with ring attention. This approach makes the workload compute-bound and eliminates the need to cache the KV state. The model&rsquo;s output is considered correct only if the highest output logits
+                index of all tokens in the answer span matches the correct answer.</p>
+            <p><img src=https://i.postimg.cc/FzRXCKLM/longva-figure3.png alt="LongVA Figure 3"></p>
+            <p>Figure 4 shows the V-NIAH performance of LongVA. We also include LLaVA-NeXT-Video-32K, a 7B video LMM trained on Mistral-Instruct-v0.2 with a 32K context length, and LongVA trained with <em>AnyRes</em> encoding scheme as baselines. In the
+                bottom left plot of Figure 4, we observe that the visual context length of LLaVA-NeXT-Video-32K is limited by the context length of its language model backbone. Once the LM training length is exceeded, V-NIAH accuracy drops significantly.
+                To extend the context length of the language model, we used training-free length extrapolation by increasing the RoPE base frequency. We tested frequencies of [3M, 10M, 30M, 100M, 300M, 1B] to find the best configuration. As shown in the
+                bottom right plot, training-free extrapolation allows the language model to retrieve information over a longer context, but the performance boost is still limited. This motivated us to train a long context language model on text and then
+                augment it with vision, resulting in LongVA. As shown in the top left plot, LongVA can almost perfectly retrieve information and answer the needle question for input frames fewer than 2000. Although we only trained LongVA&rsquo;s language
+                backbone on a context length of 224K (equivalent to 1555 frames), it generalizes well beyond that, maintaining satisfactory performance within 3000 frames.</p>
+            <p>We also present the V-NIAH heatmap of LongVA trained with <em>AnyRes</em> encoding scheme, keeping all other factors unchanged. As shown at the top right of Figure 4, LongVA-<em>AnyRes</em> demonstrates strong retrieval capabilities. However,
+                its performance still lags behind LongVA trained with UniRes. We believe that the unified representation of images and videos in UniRes, where a video is encoded in the same way as a long image, enhances the long context transfer from
+                language to vision. This approach also facilitates effective training with short vision data (images) and enables zero-shot understanding of long videos during inference.</p>
+            <h2 id=video-evaluations>Video Evaluations</h2>
+            <p>V-NIAH is suitable for providing quick validation signals during the model development cycle. Being synthetic, constructing such benchmarks is generally low-cost and can extend to arbitrary context lengths without extra human annotation. However,
+                it only tests the model&rsquo;s ability to retrieve information and does not cover other abilities necessary for a long video assistant. Therefore, we also evaluate LongVA on real-world long and short video datasets in this section. Note
+                that LongVA is trained without any video data. Unless otherwise specified, results listed in this section can be considered
+                <em>zero-shot</em>.</p>
+            <p>In Table 4, we present LongVA&rsquo;s performance on Video-MME, a comprehensive evaluation suite for video LMMs that includes diverse data types and qualitative annotations. Video-MME is an ideal benchmark for assessing LMMs&rsquo; ability
+                to handle long videos in real-world scenarios, given its average video duration of 1017 seconds and the inclusion of short, medium, and long subsets. On Video-MME, LongVA achieves state-of-the-art performance among LMMs under 10B parameters
+                and rivals the performance of much larger ones like LLaVA-NeXT-Video-34B and InternVL-Chat-V1.5. Notably, as the number of frames during inference increases, LongVA consistently shows improved performance on the long subset. However, its
+                performance on the short and medium subset saturates at 32 frames and 64 frames, respectively. These results demonstrate the necessity of having long video evaluation benchmarks, as short videos do not fully capture the model&rsquo;s capabilities
+                with long-range inputs. The strong results achieved by LongVA without any video data during training confirm the effectiveness of <em>long context transfer
+                    from language to vision</em>, where LongVA is able to understand long videos by transferring the long context capability from the language model.</p>
+            <p><img src=https://i.postimg.cc/zBx9h1c0/longva-table4.png alt="LongVA Table 4"></p>
+            <h2 id=image-evaluations>Image Evaluations</h2>
+            <p>We further evaluate our model on various image benchmarks to investigate the image performance of LongVA (Table 6). We include LLaVA-1.6-Vicuna, LLaVA-NeXT-LLaMA3 and LLaVA-NeXT-Qwen2 as strong baselines, where LLaVA-NeXT-Qwen2 model is trained
+                by us following the LLaVA-NeXT training strategy and data recipe. To ablate the influence of <em>AnyRes</em> vs. <em>UniRes</em>, we also report the performance of LongVA trained with LLaVA-NeXT&rsquo;s original <em>AnyRes</em> strategy.
+                Note that <em>UniRes</em> operate 2x2 average pooling on each image, reducing to <em>1/4</em> visual tokens per image grid. However, the grid upper bound is set to 49 for <em>UniRes</em> while 4 for <em>AnyRes</em>, so
+                <em>UniRes</em> may produce more image grids if the input images are of higher resolution. Compared to
+                <em>AnyRes</em>, <em>UniRes</em> achieved significantly increased performance InfoVQA, while the scores drop to some extent on AI2D and ChartQA.</p>
+            <p><img src=https://i.postimg.cc/SsnwcPb4/longva-table5.png alt="LongVA Table 6"></p>
+            <h1 id=conclusion>Conclusion</h1>
+            <p>This work addresses the challenges of understanding long videos in Large Multimodal Models. By extending the language model on text and then aligning this extended model with visual inputs, we significantly improved the capability of LMMs
+                to handle long videos thanks to the long context transfer phenomenon. Our model, LongVA, shows improved performance with more input frames and achieves state-of-the-art results on Video-MME. Additionally, we introduce a synthetic benchmark,
+                V-NIAH, to effectively measure the visual context length of video LMMs. We hope this work inspires further research in the field of long-vision models and multimodal agents.</p>
+            <div class=footnotes role=doc-endnotes>
+                <hr>
+                <ol>
+                    <li id=fn:1>
+                        <p>224K is the maximum we can fit with 8 A100-80G for Qwen-2-7B. We find that the embedding size significantly impacts the maximum sequence length in our optimized codebase. Qwen2 has a huge vocabulary of 152K tokens. For LLaMA2 with
+                            32K vocabulary, we can train it with 700K context length.&#160;<a href=#fnref:1 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </article>
+    <script defer src=https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js></script>
+    <script src=/js/darkmode.js defer></script>
+    <footer class=bg-gray-900>
+        <div class="max-w-md px-4 py-12 mx-auto overflow-hidden sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
+            <nav class="flex flex-wrap justify-center -mx-5 -my-2" aria-label=Footer>
+                <div class="px-5 py-2"><a href=/team/ class="text-base text-gray-400 hover:text-gray-300">Team</a></div>
+                <div class="px-5 py-2"><a href=/news/ class="text-base text-gray-400 hover:text-gray-300">News</a></div>
+                <div class="px-5 py-2"><a href=/categories/blog/ class="text-base text-gray-400 hover:text-gray-300">Blog</a></div>
+            </nav>
+            <div class="flex justify-center mt-8 space-x-6"><a href=# class="text-gray-400 hover:text-gray-300"><span
+                        class=sr-only>Twitter</span>
+                    <svg class="w-6 h-6" fill="currentcolor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path
+                            d="M8.29 20.251c7.547.0 11.675-6.253 11.675-11.675.0-.178.0-.355-.012-.53A8.348 8.348.0 0022 5.92a8.19 8.19.0 01-2.357.646 4.118 4.118.0 001.804-2.27 8.224 8.224.0 01-2.605.996 4.107 4.107.0 00-6.993 3.743A11.65 11.65.0 013.392 4.748a4.106 4.106.0 001.27 5.477A4.072 4.072.0 012.8 9.713v.052a4.105 4.105.0 003.292 4.022 4.095 4.095.0 01-1.853.07 4.108 4.108.0 003.834 2.85A8.233 8.233.0 012 18.407a11.616 11.616.0 006.29 1.84" />
+                    </svg>
+                </a><a href=# class="text-gray-400 hover:text-gray-300"><span class=sr-only>GitHub</span><svg
+                        class="w-6 h-6" fill="currentcolor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path fill-rule="evenodd"
+                            d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483.0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951.0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65.0.0.84-.27 2.75 1.026A9.564 9.564.0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688.0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855.0 1.338-.012 2.419-.012 2.747.0.268.18.58.688.482A10.019 10.019.0 0022 12.017C22 6.484 17.522 2 12 2z"
+                            clip-rule="evenodd" />
+                    </svg></a></div>
+            <p class="mt-8 text-base text-center text-gray-400">&copy; 2024 LMMs-Lab. All rights reserved.
+            </p>
+            <p class="mt-2 text-base text-center text-gray-400">Made with &#x2764;&#xfe0f; by <a href=https://nusserstudios.com class="hover:underline hover:text-primary-600"><span
+                        class="font-black uppercase">Nusser</span> <span
+                        class="font-light uppercase">Studios.</span></a></p>
+        </div>
+    </footer>
+</body>
+
+</html>
