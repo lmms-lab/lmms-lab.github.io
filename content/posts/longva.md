@@ -37,12 +37,7 @@ tags: video models
   <li><a href="#introduction">Introduction</a></li>
   <li><a href="#long-video-assistant">Long Video Assistant</a>
     <ul>
-      <li><a href="#training-long-language-model">Training Long Language Model</a></li>
-      <li><a href="#aligning-long-language-model-using-short-vision-data">Aligning Long Language Model Using Short Vision Data</a></li>
-    </ul>
-  </li>
-  <li><a href="#experiments">Experiments</a>
-    <ul>
+      <li><a href="#example-demonstrations">Example Demonstrations</a></li>
       <li><a href="#v-niah-results">V-NIAH Evaluations</a></li>
       <li><a href="#video-evaluations">Video Evaluations</a></li>
       <li><a href="#image-evaluations">Image Evaluations</a></li>
@@ -129,7 +124,7 @@ Figure 4 illustrates the performance of LongVA in the V-NIAH test, comparing it 
 
 This limitation led us to develop LongVA, which combines a long context language model trained on text with visual capabilities. The top left plot of Figure 4 shows that LongVA effectively retrieves information and answers questions within 2000 frames and maintains good performance up to 3000 frames, despite being trained on a context length of 224K tokens.
 
-Additionally, the top right plot presents the V-NIAH heatmap for LongVA trained with the *AnyRes* encoding scheme. While it shows strong retrieval capabilities, it underperforms compared to LongVA trained with the UniRes scheme. UniRes's unified representation of images and videos, treating videos as long images, enhances the transfer of long context knowledge from language to vision, facilitating effective training and zero-shot understanding of long videos.
+<!-- Additionally, the top right plot presents the V-NIAH heatmap for LongVA trained with the *AnyRes* encoding scheme. While it shows strong retrieval capabilities, it underperforms compared to LongVA trained with the UniRes scheme. UniRes's unified representation of images and videos, treating videos as long images, enhances the transfer of long context knowledge from language to vision, facilitating effective training and zero-shot understanding of long videos. -->
 
 ## Video Evaluations
 
