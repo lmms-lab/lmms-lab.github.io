@@ -19,7 +19,7 @@ tags: video models
     <a href="https://jingkang50.github.io/">Jingkang Yang<sup>1;2</sup></a>, &nbsp;
     <a href="https://zhangyuanhan-ai.github.io/">Yuanhan Zhang<sup>1;2</sup></a>, &nbsp;
     <a href="https://openreview.net/profile?id=~Ziyue_Wang5">Ziyue Wang<sup>2</sup></a>, &nbsp;
-    <a href="https://openreview.net/profile?id=~Haoran_Tan1">Haoran Tan<sup>2</sup></a>, &nbsp;
+    <a href="https://www.ntu.edu.sg/s-lab">Haoran Tan<sup>2</sup></a>, &nbsp;
     <a href="https://chunyuan.li/">Chunyuan Li<sup>1</sup></a>, &nbsp;
     <a href="https://liuziwei7.github.io/">Ziwei Liu<sup>1;2</sup></a>, &nbsp;
   </span>
