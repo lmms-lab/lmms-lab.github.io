@@ -108,13 +108,6 @@ We employed several optimization strategies to perform training on such long seq
 Inspired by the *AnyRes* encoding scheme in LLaVA-NeXT, we designed *UniRes* that provides a unified encoding scheme for both images and videos, as shown below. Unlike *AnyRes* which retains a small base image and flattens ViT patches across the grids, *UniRes* removes the base image, flattens patches within each grid, and 2x2 pool the visual features by defaul.This approach allows us to maintain consistent representation when extending image data into videos where multiple frames are viewed as multiple grids in a row. 
 
 To clearly ablate the long context transfer phenomenon from language to vision, we adopt a *train short, test long* protocol where we only use image-text data during training, but test on long videos. Specifically, we trained our model using the same data recipe and two-stage training approach as LLaVA-1.6.
-
-<p align="center">
-    <figure>
-        <img src="https://i.postimg.cc/SQZZ7dN1/longva-figure1.png" width="800">
-    </figure>
-</p>
-
 <!-- # Experiments -->
 
 ## Example Demonstrations
