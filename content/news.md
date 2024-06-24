@@ -8,6 +8,10 @@ description: Introducing the latest news and updates from the LMMs-Lab.
 
 # News
 
+- **[2024-06]** 🚀🚀 We release the `LongVA`, a long language model with state-of-the-art performance on video understanding tasks.
+    
+    [GitHub](https://github.com/EvolvingLMMs-Lab/LongVA) | [Blog](https://lmms-lab.github.io/posts/longva/)
+
 - **[2024-06]** 🎬🎬 The `lmms-eval/v0.2` has been upgraded to support video evaluations for video models like LLaVA-NeXT Video and Gemini 1.5 Pro across tasks such as EgoSchema, PerceptionTest, VideoMME, and more.
     
     [GitHub](https://github.com/EvolvingLMMs-Lab/lmms-eval) | [Blog](https://lmms-lab.github.io/posts/lmms-eval-0.2/)
