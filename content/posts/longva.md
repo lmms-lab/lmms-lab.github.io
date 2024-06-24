@@ -71,7 +71,7 @@ We opensource the code and models at:
 
 <p align="center">
     <figure>
-        <img src="https://i.postimg.cc/5tTBq2Gd/longva.png" width="800">
+        <img src="https://i.postimg.cc/5tTBq2Gd/longva.png" width="100%">
         <figcaption>V-NIAH helps us measure the superiour long context capability of LongVA in visual domain.</figcaption>
     </figure>
 </p>
@@ -79,7 +79,7 @@ We opensource the code and models at:
 
 <p align="center">
     <figure>
-        <img src="https://i.postimg.cc/pLq02tfc/longva-table4.png" width="800">
+        <img src="https://i.postimg.cc/pLq02tfc/longva-table4.png" width="100%">
         <figcaption>LongVA achieves SoTA performance among 7B LMMs and is the only opensource model with 384 input frames.</figcaption>
     </figure>
 </p>
@@ -92,7 +92,7 @@ As shown in the below figure, our method shifts the focus from reducing the numb
 
 <p align="center">
     <figure>
-        <img src="https://i.postimg.cc/SQZZ7dN1/longva-figure1.png" width="800">
+        <img src="https://i.postimg.cc/SQZZ7dN1/longva-figure1.png" width="100%">
     </figure>
 </p>
 
