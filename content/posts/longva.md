@@ -165,3 +165,9 @@ We further evaluate our model on various image benchmarks to investigate the ima
 This work addresses the challenges of understanding long videos in Large Multimodal Models. By extending the language model on text and then aligning this extended model with visual inputs, we significantly improved the capability of LMMs to handle long videos thanks to the long context transfer phenomenon. Our model, LongVA, shows improved performance with more input frames and achieves state-of-the-art results on Video-MME. Additionally, we introduce a synthetic benchmark, V-NIAH, to effectively measure the visual context length of video LMMs.  We hope this work inspires further research in the field of long-vision models and multimodal agents.
 
 [^1]: 224K is the maximum we can fit with 8 A100-80G for Qwen-2-7B. We find that the embedding size significantly impacts the maximum sequence length in our optimized codebase. Qwen2 has a huge vocabulary of 152K tokens. For LLaMA2 with 32K vocabulary, we can train it with 700K context length.
+
+# Related Projects
+
+- [LMMs-Eval](https://lmms-lab.github.io/posts/lmms-eval-0.1/)
+- [LLaVA-NeXT](https://llava-vl.github.io/blog/2024-05-10-llava-next-stronger-llms/)
+- [LLaVA-NeXT-Video](https://llava-vl.github.io/blog/2024-04-30-llava-next-video/)
