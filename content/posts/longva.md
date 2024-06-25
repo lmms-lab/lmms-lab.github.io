@@ -64,6 +64,7 @@ Gemini has amazed the world with its capability to understand hour-long videos. 
 **SoTA Performance** LongVA achieves state-of-the-art performance on the Video-MME benchmarks among 7B models. Its performance increases with denser sampling of video frames. Notably, it is the only opensource model on Video-MME that can handle 384 input frames (same as GPT4-o).
 
 We opensource the code and models at:
+- [ArXiv Paper](https://arxiv.org/abs/2406.16852)
 - [Github](https://github.com/EvolvingLMMs-Lab/LongVA)
 - [Demo](https://longva-demo.lmms-lab.com/)
 - [Checkpoints](https://huggingface.co/lmms-lab)
